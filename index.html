@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Central de Estudos — Provas Quinta & Sexta</title>
+<title>Central de Estudos — Provas Quinta &amp; Sexta</title>
 <style>
 :root{
   --bg:#0f1016; --bg2:#171925; --surface:#1e2130; --surface2:#262a3d;
@@ -23,34 +23,27 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;font-size:15px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 18px 80px}
-
-/* HEADER */
 header{background:linear-gradient(135deg,#1a1030,#0f1016 70%);border-bottom:1px solid var(--border);padding:26px 18px 20px;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px)}
 .hbar{max-width:1080px;margin:0 auto}
 h1.title{font-size:21px;font-weight:700;letter-spacing:-.3px;display:flex;align-items:center;gap:10px}
 h1.title span.logo{background:var(--primary);width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-size:17px}
 .sub{color:var(--text-muted);font-size:13px;margin-top:3px}
-/* NAV */
 nav{display:flex;gap:6px;flex-wrap:wrap;margin-top:16px}
-nav button{background:var(--surface);color:var(--text-sec);border:1px solid var(--border);padding:8px 14px;border-radius:var(--rs);cursor:pointer;font-size:13.5px;font-weight:600;font-family:var(--sans);transition:all .15s}
+nav button{background:var(--surface);color:var(--text-sec);border:1px solid var(--border);padding:8px 13px;border-radius:var(--rs);cursor:pointer;font-size:13px;font-weight:600;font-family:var(--sans);transition:all .15s}
 nav button:hover{background:var(--surface2);color:var(--text)}
 nav button.active{background:var(--primary);color:#fff;border-color:var(--primary)}
-
-/* COUNTDOWN BANNERS */
 .exam-tabs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
 @media(max-width:640px){.exam-tabs{grid-template-columns:1fr}}
 .exam-card{border-radius:var(--r);padding:18px;border:1px solid var(--border);position:relative;overflow:hidden}
-.exam-card.thu{background:linear-gradient(135deg,rgba(56,189,248,.1),var(--surface))}
+.exam-card.thu{background:linear-gradient(135deg,rgba(108,192,74,.1),var(--surface))}
 .exam-card.fri{background:linear-gradient(135deg,rgba(240,147,43,.1),var(--surface))}
 .exam-card .day{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);font-weight:700}
 .exam-card h3{font-size:17px;margin:4px 0 8px}
 .exam-card .cd{font-size:13px;color:var(--text-sec)}
 .chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px}
 .chip{font-size:11px;padding:3px 9px;border-radius:20px;font-weight:600}
-.chip.b{background:var(--info-bg);color:var(--info)}
+.chip.b{background:var(--spring-bg);color:var(--spring)}
 .chip.o{background:var(--java-bg);color:var(--java)}
-
-/* SECTIONS */
 section{display:none;animation:fade .35s ease}
 section.show{display:block}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
@@ -62,10 +55,7 @@ p{margin:8px 0;color:var(--text-sec)}
 ul,ol{margin:8px 0 8px 22px;color:var(--text-sec)}
 li{margin:4px 0}
 b,strong{color:var(--text);font-weight:650}
-
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;margin:12px 0}
-.card.flush{padding:0;overflow:hidden}
-
 .callout{border-radius:var(--rs);padding:12px 15px;margin:12px 0;border-left:3px solid;font-size:13.5px}
 .callout.warn{background:var(--warn-bg);border-color:var(--warn)}
 .callout.warn b{color:var(--warn)}
@@ -75,27 +65,23 @@ b,strong{color:var(--text);font-weight:650}
 .callout.info b{color:var(--info)}
 .callout.err{background:var(--err-bg);border-color:var(--err)}
 .callout.err b{color:var(--err)}
-
-/* CODE */
-pre{background:#0b0c13;border:1px solid var(--border);border-radius:var(--rs);padding:13px 15px;overflow-x:auto;margin:10px 0;font-family:var(--mono);font-size:12.8px;line-height:1.55}
+.callout.spring{background:var(--spring-bg);border-color:var(--spring)}
+.callout.spring b{color:var(--spring)}
+pre{background:#0b0c13;border:1px solid var(--border);border-radius:var(--rs);padding:13px 15px;overflow-x:auto;margin:10px 0;font-family:var(--mono);font-size:12.6px;line-height:1.55}
 code{font-family:var(--mono);font-size:.92em;color:#ffd79a;background:rgba(255,215,154,.08);padding:1px 5px;border-radius:4px}
 pre code{background:none;padding:0;color:#d7dcf5}
 .k{color:#c792ea}.s{color:#c3e88d}.c{color:#5c6478;font-style:italic}.a{color:#82aaff}.t{color:#ffcb6b}.n{color:#f78c6c}
-
-/* TABLE */
 table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0;background:var(--surface);border-radius:var(--r);overflow:hidden}
 th{text-align:left;color:var(--text-muted);font-weight:600;padding:9px 12px;border-bottom:1px solid var(--border);font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;background:var(--bg2)}
 td{padding:9px 12px;border-bottom:1px solid var(--border-light);color:var(--text-sec);vertical-align:top}
 tr:last-child td{border-bottom:none}
 td b{color:var(--text)}
-
-/* FLOW */
 .flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:14px 0;padding:14px;background:var(--bg2);border-radius:var(--r);border:1px solid var(--border)}
 .flow .node{background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:7px 11px;font-size:12px;font-weight:600;white-space:nowrap}
 .flow .node.hl{background:var(--primary-bg);border-color:var(--primary);color:var(--primary2)}
 .flow .arr{color:var(--primary);font-weight:700}
-
-/* UML */
+.tree{background:#0b0c13;border:1px solid var(--border);border-radius:var(--rs);padding:14px 16px;font-family:var(--mono);font-size:12.5px;color:#d7dcf5;line-height:1.7;white-space:pre;overflow-x:auto}
+.tree .f{color:var(--spring)}.tree .d{color:var(--primary2)}
 .uml-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:14px 0}
 .uml-class{background:var(--surface);border:1px solid var(--border);border-radius:var(--rs);overflow:hidden;font-family:var(--mono);font-size:12px}
 .uml-class .cn{background:var(--primary-bg);color:var(--primary2);text-align:center;font-weight:700;padding:7px;border-bottom:1px solid var(--border);font-family:var(--sans);font-size:13px}
@@ -107,8 +93,10 @@ td b{color:var(--text)}
 .rel-list{font-size:13px}
 .rel-list li{margin:6px 0}
 .rel-list code{font-size:11.5px}
-
-/* QUIZ */
+.step{display:flex;gap:12px;margin:10px 0;padding:12px 14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--rs)}
+.step .num{flex:none;width:26px;height:26px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
+.step .body{flex:1}
+.step .body h4{margin:0 0 3px}
 .quiz-head{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0}
 .quiz-head select{background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:var(--rs);padding:8px 12px;font-size:13px;font-family:var(--sans);cursor:pointer}
 .quiz-head .score{margin-left:auto;font-size:13px;color:var(--text-sec);background:var(--surface);padding:8px 14px;border-radius:var(--rs);border:1px solid var(--border)}
@@ -129,8 +117,12 @@ td b{color:var(--text)}
 .btn:hover{background:var(--primary2)}
 .btn.ghost{background:var(--surface);color:var(--text-sec);border:1px solid var(--border)}
 .btn.ghost:hover{color:var(--text)}
-
-/* FLASHCARDS */
+.drill{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;margin:12px 0}
+.drill .task{font-size:14.5px;font-weight:600;color:var(--text);margin-bottom:4px}
+.drill .hint{font-size:12.5px;color:var(--text-muted);margin-bottom:10px}
+.drill textarea{width:100%;min-height:120px;background:#0b0c13;border:1px solid var(--border);border-radius:var(--rs);color:#d7dcf5;font-family:var(--mono);font-size:12.5px;padding:11px;resize:vertical}
+.drill .sol{display:none;margin-top:10px}
+.drill .sol.show{display:block}
 .fc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:14px 0}
 .fc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:0;height:130px;cursor:pointer;perspective:1000px}
 .fc-inner{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
@@ -138,16 +130,13 @@ td b{color:var(--text)}
 .fc-face{position:absolute;inset:0;backface-visibility:hidden;display:grid;place-items:center;padding:14px;text-align:center;border-radius:var(--r)}
 .fc-front{font-weight:700;font-size:15px;color:var(--primary2)}
 .fc-back{transform:rotateY(180deg);font-size:12.5px;color:var(--text-sec);background:var(--bg2);border-radius:var(--r)}
-
-/* GEN */
 .gen-row{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
 .gen-row input,.gen-row select{background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:var(--rs);padding:9px 12px;font-size:13px;font-family:var(--sans)}
 .gen-row input{flex:1;min-width:160px}
 .pill{display:inline-block;font-size:11px;padding:2px 9px;border-radius:20px;background:var(--primary-bg);color:var(--primary2);font-weight:600;margin:0 4px 4px 0}
-
 .toc{columns:2;gap:18px}
 @media(max-width:640px){.toc{columns:1}}
-.toc a{color:var(--primary2);text-decoration:none;font-size:13.5px}
+.toc a{color:var(--primary2);text-decoration:none;font-size:13.5px;cursor:pointer}
 .toc a:hover{text-decoration:underline}
 .foot{text-align:center;color:var(--text-muted);font-size:12px;margin-top:40px;padding-top:20px;border-top:1px solid var(--border)}
 .kpill{display:inline-flex;align-items:center;gap:5px;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:4px 11px;font-size:12px;color:var(--text-sec);margin:3px 4px 3px 0}
@@ -158,13 +147,15 @@ td b{color:var(--text)}
 <header>
 <div class="hbar">
 <h1 class="title"><span class="logo">🎓</span> Central de Estudos — Provas Quinta &amp; Sexta</h1>
-<div class="sub">Diário Online (Spring/JWT) • Pizzaria (POO/JavaFX/JPA) — sem consulta à internet</div>
+<div class="sub">Prova de DESENVOLVIMENTO (escrever código, sem consulta) • Quinta: token Spring Boot • Sexta: POO/UML Pizzaria</div>
 <nav id="nav">
 <button data-s="home" class="active">🏠 Início</button>
-<button data-s="thu">📘 Quinta · Diário</button>
+<button data-s="token">🔑 Quinta · Token (Spring)</button>
+<button data-s="tarefas">📝 POO base · Tarefas</button>
+<button data-s="thu">📘 Quinta · Conceitos</button>
 <button data-s="fri">📙 Sexta · Pizzaria</button>
 <button data-s="uml">📐 UML &amp; Classes</button>
-<button data-s="gen">⚙️ Gerador de Código</button>
+<button data-s="gen">⚙️ Gerador</button>
 <button data-s="quiz">❓ Quiz</button>
 <button data-s="fc">🃏 Flashcards</button>
 </nav>
@@ -177,35 +168,34 @@ td b{color:var(--text)}
 <section id="home" class="show">
 <div class="exam-tabs">
   <div class="exam-card thu">
-    <div class="day">📘 Quinta-feira · 15/10</div>
-    <h3>Projeto Diário Online</h3>
-    <div class="cd" id="cd-thu">Full-stack: receber token sem consulta via POST</div>
-    <div class="chips">
-      <span class="chip b">Angular</span><span class="chip b">Spring Boot</span><span class="chip b">MySQL</span><span class="chip b">JWT</span><span class="chip b">Docker</span>
-    </div>
+    <div class="day">🔑 Quinta-feira · 15/10</div>
+    <h3>Sistema de Token (Spring Boot)</h3>
+    <div class="cd" id="cd-thu">Construir do zero um sistema que devolve um token via POST — SEM internet</div>
+    <div class="chips"><span class="chip b">Java</span><span class="chip b">Spring Boot</span><span class="chip b">REST/POST</span><span class="chip b">JWT</span></div>
   </div>
   <div class="exam-card fri">
     <div class="day">📙 Sexta-feira · 16/10</div>
     <h3>Projeto Pizzaria (POO)</h3>
-    <div class="cd" id="cd-fri">Criar UML, preencher diagrama de classe e criar classes</div>
-    <div class="chips">
-      <span class="chip o">Java</span><span class="chip o">JavaFX</span><span class="chip o">JDBC/DAO</span><span class="chip o">JPA/Hibernate</span><span class="chip o">UML</span>
-    </div>
+    <div class="cd" id="cd-fri">Criar UML, preencher diagrama de classe e escrever as classes do zero</div>
+    <div class="chips"><span class="chip o">Java</span><span class="chip o">JavaFX</span><span class="chip o">JDBC/DAO</span><span class="chip o">JPA</span><span class="chip o">UML</span></div>
   </div>
 </div>
 
-<div class="callout info"><b>Como esta central foi feita:</b> todo o conteúdo abaixo vem direto dos seus dois PDFs oficiais (<code>Guia_de_Estudo_Projeto_Diario_Online.pdf</code> e <code>Guia_de_Estudos_Projeto_Pizzaria.pdf</code>). As abas <b>Quiz</b> e <b>Flashcards</b> usam exatamente as perguntas e o gabarito dos guias.</div>
+<div class="callout err"><b>Regra de ouro:</b> as duas provas são de <b>DESENVOLVIMENTO sem consulta</b> — você escreve o código na mão. Então o objetivo deste site é fazer os padrões ficarem na sua <b>memória muscular</b>. Treine digitando (abas 🔑 Token, 📝 Tarefas e ⚙️ Gerador), não só lendo.</div>
+
+<div class="callout spring"><b>⚠️ Pegadinha do "sem internet" (quinta):</b> o Spring Boot baixa dependências do Maven da web. Sem internet, elas precisam já estar no <b>cache local <code>~/.m2/repository</code></b>. Antes da prova, rode o projeto UMA vez com internet pra popular o cache — depois ele compila offline. Veja a aba 🔑 Token.</div>
 
 <h2 class="sec">Mapa de estudo</h2>
 <div class="card">
-<h4>📘 Prova de Quinta — Diário Online</h4>
+<h4>🔑 Prova de Quinta — Sistema de Token (Desenvolvimento de Sistemas Web)</h4>
 <div class="toc">
-<a onclick="go('thu')">→ Visão geral full-stack</a>
-<a onclick="go('thu')">→ Arquitetura do backend (camadas)</a>
-<a onclick="go('thu')">→ Banco & relacionamento 1:N</a>
-<a onclick="go('thu')">→ API REST e CRUD</a>
-<a onclick="go('thu')">→ Autenticação JWT (fluxo)</a>
-<a onclick="go('thu')">→ Pontos de segurança</a>
+<a onclick="go('token')">→ Como a prova funciona (offline)</a>
+<a onclick="go('token')">→ Estrutura do projeto Spring Boot</a>
+<a onclick="go('token')">→ Endpoint POST que gera o token</a>
+<a onclick="go('token')">→ Passo a passo do zero</a>
+<a onclick="go('token')">→ Exercícios de digitar de memória</a>
+<a onclick="go('tarefas')">→ Base POO: Gestão de Tarefas (CRUD)</a>
+<a onclick="go('thu')">→ Conceitos (camadas, CRUD, JWT)</a>
 </div>
 </div>
 <div class="card">
@@ -213,8 +203,7 @@ td b{color:var(--text)}
 <div class="toc">
 <a onclick="go('fri')">→ Arquitetura em camadas</a>
 <a onclick="go('fri')">→ CRUD, SQL e PreparedStatement</a>
-<a onclick="go('fri')">→ JDBC + padrão DAO</a>
-<a onclick="go('fri')">→ JPA, Hibernate, ORM, JPQL</a>
+<a onclick="go('fri')">→ JDBC + DAO / JPA + Hibernate</a>
 <a onclick="go('fri')">→ OO: generics, enum, Lombok</a>
 <a onclick="go('fri')">→ JavaFX, FXML e eventos</a>
 <a onclick="go('uml')">→ Diagrama de classes (UML)</a>
@@ -222,395 +211,415 @@ td b{color:var(--text)}
 </div>
 </div>
 
-<div class="callout warn"><b>Estratégia de prova (sexta):</b> o professor vai dar um <b>tema</b>, e você terá que <b>criar o UML, preencher um diagrama de classe do zero e escrever as classes</b>. Treine isso na aba <b>⚙️ Gerador de Código</b> — digite um tema e veja o esqueleto de classes + UML gerado no padrão do projeto Pizzaria.</div>
+<div class="callout info"><b>Fontes:</b> conteúdo construído a partir dos seus guias oficiais e dos materiais do Blackboard — ADO "Horcrux 01" (Gestão de Tarefas), "HORCRUX 2" (Livraria Spring Boot) e o projeto Diário Online (login/JWT).</div>
 </section>
 
-<!-- ===================== QUINTA / DIÁRIO ===================== -->
-<section id="thu">
-<h2 class="sec">📘 Projeto Diário Online</h2>
-<p class="lead">Aplicação <b>full-stack</b>: uma pessoa cria conta, faz login e registra anotações pessoais (data, título, descrição, avaliação). A interface web (Angular) conversa com uma API (Spring Boot) que grava em um banco relacional (MySQL), protegida por <b>JWT</b>.</p>
+<!-- ===================== TOKEN / SPRING ===================== -->
+<section id="token">
+<h2 class="sec">🔑 Sistema de Token — Spring Boot (prova de quinta)</h2>
+<p class="lead">O que a prova pede: <b>construir uma aplicação Spring Boot</b> em que o usuário manda credenciais num <b>POST</b> e recebe de volta um <b>token</b> (JWT). Sem internet, você escreve tudo de memória. Esta aba é o molde pra decorar.</p>
 
+<div class="callout spring"><b>Preparo offline (faça HOJE, com internet):</b>
+<ol style="margin-top:6px">
+<li>Crie o projeto no <b>Spring Initializr</b> com as dependências <b>Spring Web</b> + <b>Lombok</b> (e <b>Spring Security/JWT</b> se o professor pedir).</li>
+<li>Rode <code>./mvnw spring-boot:run</code> uma vez — isso <b>baixa tudo pro cache <code>~/.m2</code></b>.</li>
+<li>Depois disso ele compila e roda <b>offline</b>. Leve o projeto-base pronto se for permitido.</li>
+</ol></div>
+
+<h3 class="blk">📁 Estrutura mínima do projeto</h3>
+<div class="tree"><span class="d">src/main/java/com/exemplo/token/</span>
+├── <span class="f">TokenApplication.java</span>   <span class="c">// @SpringBootApplication (main)</span>
+├── controller/
+│   └── <span class="f">AuthController.java</span>   <span class="c">// @RestController — POST /login</span>
+├── service/
+│   └── <span class="f">TokenService.java</span>     <span class="c">// gera/valida o token</span>
+├── dto/
+│   ├── <span class="f">LoginRequest.java</span>     <span class="c">// corpo que CHEGA (usuario, senha)</span>
+│   └── <span class="f">TokenResponse.java</span>    <span class="c">// corpo que VOLTA (token)</span>
+<span class="d">src/main/resources/</span>
+└── <span class="f">application.properties</span>   <span class="c">// porta, segredo do token</span></div>
+
+<h3 class="blk">🔄 O fluxo da requisição (decore isso)</h3>
+<div class="flow">
+<span class="node">Cliente (Postman)</span><span class="arr">→</span>
+<span class="node hl">POST /login</span><span class="arr">→</span>
+<span class="node hl">AuthController</span><span class="arr">→</span>
+<span class="node hl">TokenService.gerarToken()</span><span class="arr">→</span>
+<span class="node">TokenResponse(token)</span><span class="arr">→</span>
+<span class="node">200 OK + JSON</span>
+</div>
+
+<h3 class="blk">💻 Código completo (molde para memorizar)</h3>
+<h4>1) Classe principal</h4>
+<pre><code><span class="k">@SpringBootApplication</span>
+<span class="k">public class</span> <span class="t">TokenApplication</span> {
+    <span class="k">public static void</span> main(<span class="t">String</span>[] args) {
+        SpringApplication.run(<span class="t">TokenApplication</span>.<span class="k">class</span>, args);
+    }
+}</code></pre>
+
+<h4>2) DTOs (dados que entram e saem)</h4>
+<pre><code><span class="c">// corpo da requisição (JSON que chega no POST)</span>
+<span class="k">public class</span> <span class="t">LoginRequest</span> {
+    <span class="k">private</span> <span class="t">String</span> usuario;
+    <span class="k">private</span> <span class="t">String</span> senha;
+    <span class="c">// getters e setters</span>
+}
+
+<span class="c">// corpo da resposta (JSON que volta)</span>
+<span class="k">public class</span> <span class="t">TokenResponse</span> {
+    <span class="k">private</span> <span class="t">String</span> token;
+    <span class="k">public</span> <span class="t">TokenResponse</span>(<span class="t">String</span> token) { <span class="k">this</span>.token = token; }
+    <span class="k">public</span> <span class="t">String</span> getToken() { <span class="k">return</span> token; }
+}</code></pre>
+
+<h4>3) Service — gera o token</h4>
+<pre><code><span class="k">@Service</span>
+<span class="k">public class</span> <span class="t">TokenService</span> {
+    <span class="c">// validação simples (na prova pode ser usuario/senha fixos ou vindo de lista)</span>
+    <span class="k">public</span> <span class="t">String</span> gerarToken(<span class="t">String</span> usuario, <span class="t">String</span> senha) {
+        <span class="k">if</span> (usuario == <span class="k">null</span> || usuario.isBlank()
+                || senha == <span class="k">null</span> || senha.isBlank()) {
+            <span class="k">throw new</span> <span class="t">IllegalArgumentException</span>(<span class="s">"Usuário e senha são obrigatórios"</span>);
+        }
+        <span class="k">if</span> (!senha.equals(<span class="s">"1234"</span>)) {                 <span class="c">// regra de exemplo</span>
+            <span class="k">throw new</span> <span class="t">RuntimeException</span>(<span class="s">"Credenciais inválidas"</span>);
+        }
+        <span class="c">// token simples: pode ser UUID, ou JWT se o prof pedir</span>
+        <span class="k">return</span> <span class="t">UUID</span>.randomUUID().toString();
+    }
+}</code></pre>
+
+<h4>4) Controller — o endpoint POST</h4>
+<pre><code><span class="k">@RestController</span>
+<span class="k">public class</span> <span class="t">AuthController</span> {
+
+    <span class="k">private final</span> <span class="t">TokenService</span> service;
+
+    <span class="k">public</span> <span class="t">AuthController</span>(<span class="t">TokenService</span> service) {  <span class="c">// injeção por construtor</span>
+        <span class="k">this</span>.service = service;
+    }
+
+    <span class="k">@PostMapping</span>(<span class="s">"/login"</span>)
+    <span class="k">public</span> <span class="t">TokenResponse</span> login(<span class="k">@RequestBody</span> <span class="t">LoginRequest</span> req) {
+        <span class="t">String</span> token = service.gerarToken(req.getUsuario(), req.getSenha());
+        <span class="k">return new</span> <span class="t">TokenResponse</span>(token);     <span class="c">// vira JSON {"token":"..."}</span>
+    }
+}</code></pre>
+
+<h4>5) Testar (Postman / Thunder Client)</h4>
+<pre><code>POST  http://localhost:8080/login
+Body (JSON):
+{
+    "usuario": "yago",
+    "senha": "1234"
+}
+<span class="c">// Resposta esperada: { "token": "e4f1c2..." }</span></code></pre>
+
+<div class="callout warn"><b>Variante com JWT (se o professor exigir):</b> em vez de UUID, o token é um <b>JWT assinado</b>. O cliente depois manda ele no header <code>Authorization: Bearer &lt;token&gt;</code> nas rotas protegidas, e o backend valida a assinatura antes de liberar.</div>
+
+<h3 class="blk">🧭 Passo a passo pra fazer na prova (do zero)</h3>
+<div class="step"><div class="num">1</div><div class="body"><h4>Criar o projeto</h4><p>Spring Initializr (ou projeto-base pronto). Marque <b>Spring Web</b> e <b>Lombok</b>.</p></div></div>
+<div class="step"><div class="num">2</div><div class="body"><h4>Rodar vazio</h4><p><code>./mvnw spring-boot:run</code> — confirme que sobe na porta 8080.</p></div></div>
+<div class="step"><div class="num">3</div><div class="body"><h4>Criar os DTOs</h4><p><code>LoginRequest</code> (usuario, senha) e <code>TokenResponse</code> (token).</p></div></div>
+<div class="step"><div class="num">4</div><div class="body"><h4>Criar o Service</h4><p><code>TokenService.gerarToken()</code> com a validação e a geração do token.</p></div></div>
+<div class="step"><div class="num">5</div><div class="body"><h4>Criar o Controller</h4><p><code>@RestController</code> + <code>@PostMapping("/login")</code> + <code>@RequestBody</code>.</p></div></div>
+<div class="step"><div class="num">6</div><div class="body"><h4>Testar no Postman</h4><p>POST com JSON → recebe o token. Pronto!</p></div></div>
+
+<h3 class="blk">🏷️ Anotações que você PRECISA saber de cabeça</h3>
+<table>
+<tr><th>Anotação</th><th>Para que serve</th></tr>
+<tr><td><code>@SpringBootApplication</code></td><td>Marca a classe principal (sobe a aplicação)</td></tr>
+<tr><td><code>@RestController</code></td><td>Classe que responde requisições HTTP e devolve JSON</td></tr>
+<tr><td><code>@PostMapping("/login")</code></td><td>Mapeia um POST para o método</td></tr>
+<tr><td><code>@GetMapping</code> / <code>@PutMapping</code> / <code>@DeleteMapping</code></td><td>Outros verbos HTTP</td></tr>
+<tr><td><code>@RequestBody</code></td><td>Converte o JSON recebido em um objeto Java</td></tr>
+<tr><td><code>@PathVariable</code> / <code>@RequestParam</code></td><td>Pega valor da URL / query string</td></tr>
+<tr><td><code>@Service</code></td><td>Marca a classe de regra de negócio (injetável)</td></tr>
+<tr><td><code>@Autowired</code> / construtor</td><td>Injeção de dependência</td></tr>
+</table>
+
+<h3 class="blk">✍️ Exercícios — digite de memória</h3>
+<p class="lead">Feche os códigos acima, escreva aqui e só então revele a solução.</p>
+<div id="tokenDrills"></div>
+</section>
+
+<!-- ===================== TAREFAS (POO BASE) ===================== -->
+<section id="tarefas">
+<h2 class="sec">📝 Gestão de Tarefas — base de POO</h2>
+<p class="lead">Este é o ADO <b>Horcrux 01</b>: um CRUD de tarefas em Java puro, rodando no <b>terminal</b> com menu. É a base de tudo (classes, <code>ArrayList</code>, validações). Dominar isto deixa o Spring Boot e a Pizzaria muito mais fáceis.</p>
+
+<h3 class="blk">📐 Diagrama de classes (do enunciado)</h3>
+<div class="uml-grid">
+  <div class="uml-class">
+    <div class="cn">Tarefa</div>
+    <div class="sect"><div><span class="vis">-</span> id : int</div><div><span class="vis">+</span> titulo : String</div><div><span class="vis">+</span> descricao : String</div><div><span class="vis">+</span> finalizado : boolean</div></div>
+    <div class="sect"><div><span class="vis">+</span> lerId() : int</div></div>
+  </div>
+  <div class="uml-class">
+    <div class="cn">GestaoTarefas</div>
+    <div class="sect"><div><span class="vis">-</span> tarefas : ArrayList&lt;Tarefa&gt;</div></div>
+    <div class="sect"><div><span class="vis">+</span> adicionar(t) : void</div><div><span class="vis">+</span> remover(id) : void</div><div><span class="vis">+</span> marcarLido(id) : void</div><div><span class="vis">+</span> listarTodas() : List</div><div><span class="vis">+</span> listarFinalizadas() : List</div><div><span class="vis">+</span> alterar(id, t) : void</div></div>
+  </div>
+</div>
+<div class="flow"><span class="node hl">Usuário (1)</span><span class="arr">———&lt;</span><span class="node hl">(0..*) Tarefa</span></div>
+
+<h3 class="blk">📋 Regras de negócio (caem na prova)</h3>
+<table>
+<tr><th>Operação</th><th>Regra</th></tr>
+<tr><td><b>Adicionar</b></td><td>Título e descrição obrigatórios (não nulos/vazios); <b>id único e automático</b>; <code>finalizado=false</code>; insere no fim da lista.</td></tr>
+<tr><td><b>Remover</b></td><td>Informar id; <b>validar existência</b>; se não existir → erro "Tarefa não encontrada", não altera a lista.</td></tr>
+<tr><td><b>Marcar finalizada</b></td><td>Validar existência; define <code>finalizado=true</code>; <b>idempotente</b> (marcar de novo não dá erro).</td></tr>
+<tr><td><b>Listar todas</b></td><td>Retorna tudo; se vazio, retorna <b>lista vazia</b> (sem erro).</td></tr>
+<tr><td><b>Listar finalizadas</b></td><td>Só as com <code>finalizado=true</code>; vazio sem erro.</td></tr>
+<tr><td><b>Alterar</b></td><td>Validar existência; <b>id imutável</b>; só muda título/descrição (não nulos/vazios).</td></tr>
+</table>
+
+<h3 class="blk">💻 Código de referência</h3>
+<h4>Classe Tarefa</h4>
+<pre><code><span class="k">public class</span> <span class="t">Tarefa</span> {
+    <span class="k">private</span> <span class="k">int</span> id;
+    <span class="k">private</span> <span class="t">String</span> titulo;
+    <span class="k">private</span> <span class="t">String</span> descricao;
+    <span class="k">private</span> <span class="k">boolean</span> finalizado;
+
+    <span class="k">public</span> <span class="t">Tarefa</span>(<span class="k">int</span> id, <span class="t">String</span> titulo, <span class="t">String</span> descricao) {
+        <span class="k">this</span>.id = id;
+        <span class="k">this</span>.titulo = titulo;
+        <span class="k">this</span>.descricao = descricao;
+        <span class="k">this</span>.finalizado = <span class="k">false</span>;      <span class="c">// sempre começa false</span>
+    }
+    <span class="k">public</span> <span class="k">int</span> lerId() { <span class="k">return</span> id; }
+    <span class="k">public</span> <span class="t">String</span> getTitulo() { <span class="k">return</span> titulo; }
+    <span class="k">public</span> <span class="k">void</span> setTitulo(<span class="t">String</span> t) { <span class="k">this</span>.titulo = t; }
+    <span class="k">public</span> <span class="t">String</span> getDescricao() { <span class="k">return</span> descricao; }
+    <span class="k">public</span> <span class="k">void</span> setDescricao(<span class="t">String</span> d) { <span class="k">this</span>.descricao = d; }
+    <span class="k">public</span> <span class="k">boolean</span> isFinalizado() { <span class="k">return</span> finalizado; }
+    <span class="k">public</span> <span class="k">void</span> setFinalizado(<span class="k">boolean</span> f) { <span class="k">this</span>.finalizado = f; }
+}</code></pre>
+
+<h4>Classe GestaoTarefas (o CRUD)</h4>
+<pre><code><span class="k">public class</span> <span class="t">GestaoTarefas</span> {
+    <span class="k">private</span> <span class="t">ArrayList</span>&lt;<span class="t">Tarefa</span>&gt; tarefas = <span class="k">new</span> <span class="t">ArrayList</span>&lt;&gt;();
+    <span class="k">private</span> <span class="k">int</span> proximoId = <span class="n">1</span>;        <span class="c">// gera id único</span>
+
+    <span class="k">public</span> <span class="k">void</span> adicionar(<span class="t">String</span> titulo, <span class="t">String</span> descricao) {
+        <span class="k">if</span> (titulo == <span class="k">null</span> || titulo.isBlank()
+                || descricao == <span class="k">null</span> || descricao.isBlank()) {
+            <span class="k">throw new</span> <span class="t">IllegalArgumentException</span>(<span class="s">"Título e descrição obrigatórios"</span>);
+        }
+        tarefas.add(<span class="k">new</span> <span class="t">Tarefa</span>(proximoId++, titulo, descricao));
+    }
+
+    <span class="k">private</span> <span class="t">Tarefa</span> buscar(<span class="k">int</span> id) {       <span class="c">// helper de validação</span>
+        <span class="k">for</span> (<span class="t">Tarefa</span> t : tarefas) {
+            <span class="k">if</span> (t.lerId() == id) <span class="k">return</span> t;
+        }
+        <span class="k">throw new</span> <span class="t">RuntimeException</span>(<span class="s">"Tarefa não encontrada"</span>);
+    }
+
+    <span class="k">public</span> <span class="k">void</span> remover(<span class="k">int</span> id) {
+        <span class="t">Tarefa</span> t = buscar(id);               <span class="c">// lança erro se não existe</span>
+        tarefas.remove(t);
+    }
+
+    <span class="k">public</span> <span class="k">void</span> marcarLido(<span class="k">int</span> id) {
+        buscar(id).setFinalizado(<span class="k">true</span>);     <span class="c">// idempotente</span>
+    }
+
+    <span class="k">public</span> <span class="k">void</span> alterar(<span class="k">int</span> id, <span class="t">String</span> titulo, <span class="t">String</span> descricao) {
+        <span class="k">if</span> (titulo == <span class="k">null</span> || titulo.isBlank()
+                || descricao == <span class="k">null</span> || descricao.isBlank()) {
+            <span class="k">throw new</span> <span class="t">IllegalArgumentException</span>(<span class="s">"Título e descrição obrigatórios"</span>);
+        }
+        <span class="t">Tarefa</span> t = buscar(id);               <span class="c">// id NÃO muda</span>
+        t.setTitulo(titulo);
+        t.setDescricao(descricao);
+    }
+
+    <span class="k">public</span> <span class="t">ArrayList</span>&lt;<span class="t">Tarefa</span>&gt; listarTodas() {
+        <span class="k">return</span> tarefas;
+    }
+
+    <span class="k">public</span> <span class="t">ArrayList</span>&lt;<span class="t">Tarefa</span>&gt; listarFinalizadas() {
+        <span class="t">ArrayList</span>&lt;<span class="t">Tarefa</span>&gt; r = <span class="k">new</span> <span class="t">ArrayList</span>&lt;&gt;();
+        <span class="k">for</span> (<span class="t">Tarefa</span> t : tarefas) {
+            <span class="k">if</span> (t.isFinalizado()) r.add(t);
+        }
+        <span class="k">return</span> r;
+    }
+}</code></pre>
+
+<h4>Menu no terminal (main)</h4>
+<pre><code><span class="t">Scanner</span> sc = <span class="k">new</span> <span class="t">Scanner</span>(<span class="t">System</span>.in);
+<span class="t">GestaoTarefas</span> g = <span class="k">new</span> <span class="t">GestaoTarefas</span>();
+<span class="k">int</span> op;
+<span class="k">do</span> {
+    <span class="t">System</span>.out.println(<span class="s">"\n1-Adicionar 2-Remover 3-Finalizar 4-Listar todas 5-Finalizadas 6-Alterar 0-Sair"</span>);
+    op = sc.nextInt(); sc.nextLine();
+    <span class="k">switch</span> (op) {
+        <span class="k">case</span> <span class="n">1</span> -&gt; { <span class="c">/* ler titulo/descricao e g.adicionar(...) */</span> }
+        <span class="k">case</span> <span class="n">2</span> -&gt; { <span class="c">/* ler id e g.remover(id) */</span> }
+        <span class="k">case</span> <span class="n">3</span> -&gt; { <span class="c">/* ler id e g.marcarLido(id) */</span> }
+        <span class="k">case</span> <span class="n">4</span> -&gt; g.listarTodas().forEach(t -&gt; <span class="t">System</span>.out.println(t.lerId()+<span class="s">" - "</span>+t.getTitulo()));
+        <span class="k">case</span> <span class="n">5</span> -&gt; g.listarFinalizadas().forEach(t -&gt; <span class="t">System</span>.out.println(t.getTitulo()));
+        <span class="k">case</span> <span class="n">6</span> -&gt; { <span class="c">/* ler id, titulo, descricao e g.alterar(...) */</span> }
+    }
+} <span class="k">while</span> (op != <span class="n">0</span>);</code></pre>
+
+<h3 class="blk">✍️ Exercícios — digite de memória</h3>
+<div id="tarefaDrills"></div>
+</section>
+
+<!-- ===================== QUINTA / CONCEITOS ===================== -->
+<section id="thu">
+<h2 class="sec">📘 Conceitos — Diário Online / Web</h2>
+<p class="lead">Fundamentos full-stack que o professor cobra ao explicar o projeto: camadas do backend, CRUD, relacionamento e JWT. Útil pra responder/explicar e entender o porquê do código.</p>
 <div class="card">
 <table>
 <tr><th>Parte</th><th>Responsabilidade</th><th>Tecnologia</th></tr>
-<tr><td><b>Frontend</b></td><td>Telas, formulários, navegação e chamadas HTTP</td><td>Angular / TypeScript</td></tr>
+<tr><td><b>Frontend</b></td><td>Telas, formulários, chamadas HTTP</td><td>Angular / TypeScript</td></tr>
 <tr><td><b>Backend</b></td><td>Endpoints e regras de negócio</td><td>Java / Spring Boot</td></tr>
-<tr><td><b>Banco</b></td><td>Persistência de contas e anotações</td><td>MySQL / JPA</td></tr>
-<tr><td><b>Autenticação</b></td><td>Validar acesso e proteger recursos</td><td>JWT</td></tr>
-<tr><td><b>Execução</b></td><td>Configurar e iniciar serviços</td><td>Docker Compose</td></tr>
+<tr><td><b>Banco</b></td><td>Persistência</td><td>MySQL / JPA</td></tr>
+<tr><td><b>Autenticação</b></td><td>Proteger recursos</td><td>JWT</td></tr>
+<tr><td><b>Execução</b></td><td>Subir serviços</td><td>Docker Compose</td></tr>
 </table>
 </div>
-
-<h3 class="blk">🏛️ Arquitetura do backend (camadas)</h3>
+<h3 class="blk">🏛️ Camadas do backend</h3>
 <table>
 <tr><th>Camada</th><th>O que faz</th></tr>
-<tr><td><b>Controller</b></td><td>Recebe requisições HTTP, lê parâmetros/corpo e define a resposta.</td></tr>
-<tr><td><b>Service</b></td><td>Concentra as regras de negócio e coordena operações (evita lógica demais no Controller).</td></tr>
-<tr><td><b>Repository</b></td><td>Abstrai consultas e gravações no banco (Spring Data JPA).</td></tr>
-<tr><td><b>Entity / Model</b></td><td>Representa os dados persistidos. Entidades centrais: <b>Conta</b> e <b>Anotacao</b>.</td></tr>
-<tr><td><b>Request / DTO</b></td><td>Transporta dados recebidos/enviados pela API sem expor a entidade inteira.</td></tr>
-<tr><td><b>JwtUtil</b></td><td>Apoia geração e validação dos tokens JWT.</td></tr>
+<tr><td><b>Controller</b></td><td>Recebe requisições HTTP, lê corpo/parâmetros e define a resposta.</td></tr>
+<tr><td><b>Service</b></td><td>Concentra as regras de negócio.</td></tr>
+<tr><td><b>Repository</b></td><td>Abstrai consultas e gravações (Spring Data JPA).</td></tr>
+<tr><td><b>Entity</b></td><td>Dados persistidos (ex.: Conta, Anotacao).</td></tr>
+<tr><td><b>DTO</b></td><td>Transporta dados sem expor a entidade.</td></tr>
 </table>
-
-<h4>Fluxo típico de uma requisição</h4>
 <div class="flow">
-<span class="node">Navegador</span><span class="arr">→</span>
-<span class="node">Componente Angular</span><span class="arr">→</span>
-<span class="node">Serviço HTTP</span><span class="arr">→</span>
-<span class="node hl">Controller</span><span class="arr">→</span>
-<span class="node hl">Service</span><span class="arr">→</span>
-<span class="node hl">Repository/JPA</span><span class="arr">→</span>
-<span class="node">MySQL</span><span class="arr">→</span>
-<span class="node">resposta HTTP</span>
+<span class="node">Angular</span><span class="arr">→</span><span class="node hl">Controller</span><span class="arr">→</span><span class="node hl">Service</span><span class="arr">→</span><span class="node hl">Repository/JPA</span><span class="arr">→</span><span class="node">MySQL</span>
 </div>
-
-<h4>Telas (frontend Angular)</h4>
-<div>
-<span class="kpill"><b>/login</b> credenciais + inicia autenticação</span>
-<span class="kpill"><b>/cadastro</b> cria conta</span>
-<span class="kpill"><b>/inicio</b> resumo das anotações</span>
-<span class="kpill"><b>/nova</b> data, título, descrição, avaliação</span>
-<span class="kpill"><b>/buscar</b> consulta por intervalo de datas</span>
-<span class="kpill"><b>cartão</b> componente reutilizável de anotação</span>
-</div>
-
-<h3 class="blk">🗄️ Banco de dados e relacionamento</h3>
-<div class="uml-grid">
-  <div class="uml-class">
-    <div class="cn">Conta <small>&laquo;entity&raquo;</small></div>
-    <div class="sect"><div><span class="vis">-</span> id : Long</div><div><span class="vis">-</span> nome : String</div><div><span class="vis">-</span> email : String</div><div><span class="vis">-</span> senha : String <span class="c">(hash)</span></div></div>
-  </div>
-  <div class="uml-class">
-    <div class="cn">Anotacao <small>&laquo;entity&raquo;</small></div>
-    <div class="sect"><div><span class="vis">-</span> id : Long</div><div><span class="vis">-</span> conta : Conta <span class="c">(FK)</span></div><div><span class="vis">-</span> data : LocalDate</div><div><span class="vis">-</span> titulo : String</div><div><span class="vis">-</span> descricao : String</div><div><span class="vis">-</span> avaliacao : int</div></div>
-  </div>
-</div>
-<div class="flow"><span class="node hl">CONTA (1)</span><span class="arr">———&lt;</span><span class="node hl">(N) ANOTACAO</span></div>
-<p><b>Relacionamento 1:N:</b> uma conta pode ter muitas anotações; cada anotação pertence a uma conta. A tabela de anotações guarda uma <b>chave estrangeira (FK)</b> para a conta.</p>
-<div class="callout warn"><b>Atenção (prova):</b> há uma restrição para evitar <b>mais de uma anotação da mesma conta na mesma data</b> — confirme no SQL se foi feita por <b>chave única (UNIQUE)</b> ou outro mecanismo.</div>
-
-<h3 class="blk">🔗 API REST e CRUD</h3>
-<p>API REST = interface que disponibiliza operações por URLs e métodos HTTP. <b>CRUD</b> = Create, Read, Update, Delete.</p>
+<h3 class="blk">🔗 CRUD e métodos HTTP</h3>
 <table>
-<tr><th>Operação</th><th>Método HTTP</th><th>Uso</th></tr>
-<tr><td>Create</td><td><b>POST</b></td><td>Criar uma conta ou anotação</td></tr>
-<tr><td>Read</td><td><b>GET</b></td><td>Consultar ou listar dados</td></tr>
-<tr><td>Update</td><td><b>PUT/PATCH</b></td><td>Atualizar dados</td></tr>
-<tr><td>Delete</td><td><b>DELETE</b></td><td>Excluir um registro</td></tr>
+<tr><th>Operação</th><th>Método</th><th>Uso</th></tr>
+<tr><td>Create</td><td><b>POST</b></td><td>Criar</td></tr>
+<tr><td>Read</td><td><b>GET</b></td><td>Consultar/listar</td></tr>
+<tr><td>Update</td><td><b>PUT/PATCH</b></td><td>Atualizar</td></tr>
+<tr><td>Delete</td><td><b>DELETE</b></td><td>Excluir</td></tr>
 </table>
-<div class="callout err"><b>Pegadinha de rotas:</b> no material, o README documentava <code>POST /auth/cadastro</code>, mas o <b>AuthController</b> não tinha essa rota — o cadastro aparecia em <b>ContaController</b> como <code>POST /contas</code>. Sempre compare README × Controller × serviço Angular.</div>
-
-<h3 class="blk">🔐 Autenticação JWT</h3>
-<p><b>JWT = JSON Web Token.</b> Depois de validar as credenciais, o backend emite um token assinado. O frontend envia esse token nas requisições protegidas, geralmente no cabeçalho <code>Authorization</code>.</p>
+<h3 class="blk">🔐 Fluxo JWT</h3>
 <ol>
-<li>O usuário envia e-mail e senha.</li>
-<li>O backend valida as credenciais.</li>
-<li>O backend gera um token.</li>
-<li>O frontend gerencia o token.</li>
-<li>O token é enviado nas requisições protegidas.</li>
-<li>O backend valida o token antes de liberar o recurso.</li>
+<li>Usuário envia e-mail/senha.</li><li>Backend valida.</li><li>Backend gera o token.</li>
+<li>Frontend guarda o token.</li><li>Token vai nas requisições protegidas (header <code>Authorization</code>).</li><li>Backend valida o token antes de liberar.</li>
 </ol>
-
-<h3 class="blk">🛡️ Pontos de segurança levantados</h3>
-<div class="callout err"><b>1. Senhas:</b> o projeto usava <b>MD5 sem salt</b> — inadequado. Prefira <b>BCrypt ou Argon2</b>.</div>
-<div class="callout err"><b>2. Chave JWT fixa no código:</b> mantenha o segredo em <b>variável de ambiente</b> / gerenciador de segredos, fora do repositório.</div>
-<div class="callout warn"><b>3. Bug de config:</b> o Docker Compose passava <code>JWT_SECRET</code>, mas <code>JwtUtil</code> não usava essa variável — a config externa não tinha efeito.</div>
-<div class="callout warn"><b>4. .env com segredos:</b> não versione <code>deploy/.env</code> nem <code>docker-compose.override.yaml</code> com credenciais reais.</div>
-
-<h3 class="blk">🧰 Tecnologias que você precisa saber explicar</h3>
-<div>
-<span class="kpill"><b>Angular</b> framework de componentes</span>
-<span class="kpill"><b>TypeScript</b> JS com tipagem estática</span>
-<span class="kpill"><b>Spring Boot</b> configura apps Java/API</span>
-<span class="kpill"><b>Spring Web</b> Controllers e endpoints</span>
-<span class="kpill"><b>Spring Data JPA</b> mapeamento objeto↔tabela</span>
-<span class="kpill"><b>Hibernate</b> implementação de JPA</span>
-<span class="kpill"><b>MySQL</b> banco relacional</span>
-<span class="kpill"><b>Maven (pom.xml)</b> dependências + build</span>
-<span class="kpill"><b>Lombok</b> gera getters/setters</span>
-<span class="kpill"><b>Docker Compose</b> sobe vários serviços</span>
-</div>
-<div class="callout ok"><b>Resumo pra decorar:</b> usuário interage com Angular → serviço envia requisição HTTP → Controller recebe → Service aplica regras → Repository usa JPA → MySQL → API devolve resposta. Depois explique o login/JWT e cite os pontos de segurança.</div>
+<h3 class="blk">🗄️ Relacionamento 1:N</h3>
+<div class="flow"><span class="node hl">CONTA (1)</span><span class="arr">———&lt;</span><span class="node hl">(N) ANOTACAO</span></div>
+<p>Uma conta tem muitas anotações; cada anotação pertence a uma conta (FK). Restrição: evitar duas anotações da mesma conta na mesma data (chave única).</p>
+<div class="callout err"><b>Segurança:</b> trocar MD5 por <b>BCrypt/Argon2</b>; segredo do JWT em <b>variável de ambiente</b> (não no código).</div>
 </section>
 
 <!-- ===================== SEXTA / PIZZARIA ===================== -->
 <section id="fri">
-<h2 class="sec">📙 Projeto Pizzaria — POO</h2>
-<p class="lead">Aplicação <b>JavaFX</b> que recebe dados do usuário, <b>valida</b>, acessa o banco e apresenta resultados. Duas formas de persistência convivem: <b>JDBC/DAO</b> para Cliente e <b>JPA/Hibernate/Repository</b> para Pizza.</p>
-
-<div class="card">
-<table>
-<tr><th>Arquivo</th><th>Conteúdo</th></tr>
-<tr><td><b>pizzaria.zip</b></td><td>14 .java + 2 FXML. Só JDBC/DAO.</td></tr>
-<tr><td><b>pizzaria(1).zip</b></td><td>18 .java + 4 FXML. Versão mais desenvolvida: adiciona <code>PizzaController</code>, <code>JpaUtil</code>, <code>PizzaRepository</code>, <code>PizzaService</code>.</td></tr>
-</table>
-</div>
-
+<h2 class="sec">📙 Projeto Pizzaria — POO (prova de sexta)</h2>
+<p class="lead">Aplicação <b>JavaFX</b> que valida dados e acessa o banco por <b>JDBC/DAO</b> (Cliente) e <b>JPA/Repository</b> (Pizza). Na prova: criar UML + escrever as classes.</p>
 <h3 class="blk">🏛️ Arquitetura em camadas</h3>
 <table>
 <tr><th>Camada</th><th>Responsabilidade</th><th>Exemplo</th></tr>
-<tr><td><b>Model/Entidade</b></td><td>Representar dados do domínio</td><td>Cliente, Pizza, enum Tamanho</td></tr>
-<tr><td><b>View (FXML)</b></td><td>Definir a interface visual</td><td>Campos, botões, tabela, ComboBox</td></tr>
-<tr><td><b>Controller</b></td><td>Responder a eventos da tela</td><td>Ler campo e chamar <code>service.salvar()</code></td></tr>
-<tr><td><b>Service</b></td><td>Validar regras de negócio</td><td>Impedir sabor vazio ou preço inválido</td></tr>
-<tr><td><b>DAO</b></td><td>Persistência via JDBC</td><td>INSERT e SELECT de clientes</td></tr>
-<tr><td><b>Repository</b></td><td>Persistência via JPA</td><td>persist(), find(), merge(), remove()</td></tr>
-<tr><td><b>Factory/Util</b></td><td>Centralizar criação de recursos</td><td>Obter conexão ou EntityManager</td></tr>
+<tr><td><b>Model</b></td><td>Dados do domínio</td><td>Cliente, Pizza, enum Tamanho</td></tr>
+<tr><td><b>View (FXML)</b></td><td>Interface visual</td><td>Campos, botões, tabela</td></tr>
+<tr><td><b>Controller</b></td><td>Eventos da tela</td><td>Ler campo, chamar <code>service.salvar()</code></td></tr>
+<tr><td><b>Service</b></td><td>Regras de negócio</td><td>Impedir sabor vazio/preço inválido</td></tr>
+<tr><td><b>DAO</b></td><td>Persistência JDBC</td><td>INSERT/SELECT de clientes</td></tr>
+<tr><td><b>Repository</b></td><td>Persistência JPA</td><td>persist/find/merge/remove</td></tr>
 </table>
-<div class="flow">
-<span class="node">usuário</span><span class="arr">→</span><span class="node">View/FXML</span><span class="arr">→</span><span class="node hl">Controller</span><span class="arr">→</span><span class="node hl">Service</span><span class="arr">→</span><span class="node hl">DAO ou Repository</span><span class="arr">→</span><span class="node">banco</span>
-</div>
-<div class="callout info"><b>Por que não colocar tudo no Controller?</b> A tela ficaria validando regras, montando SQL e manipulando resultados; a lógica não seria reutilizável; mudanças no banco afetariam a interface. Separar responsabilidades facilita testar e manter.</div>
-
+<div class="flow"><span class="node">View/FXML</span><span class="arr">→</span><span class="node hl">Controller</span><span class="arr">→</span><span class="node hl">Service</span><span class="arr">→</span><span class="node hl">DAO ou Repository</span><span class="arr">→</span><span class="node">banco</span></div>
 <h3 class="blk">💾 CRUD, SQL e PreparedStatement</h3>
 <table>
 <tr><th>Operação</th><th>SQL</th><th>Método JDBC</th></tr>
-<tr><td>Create</td><td>INSERT</td><td rowspan="3"><b>executeUpdate()</b><br><span style="color:var(--text-muted)">(retorna nº de linhas afetadas)</span></td></tr>
-<tr><td>Update</td><td>UPDATE</td></tr>
-<tr><td>Delete</td><td>DELETE</td></tr>
+<tr><td>Create/Update/Delete</td><td>INSERT/UPDATE/DELETE</td><td><b>executeUpdate()</b></td></tr>
 <tr><td>Read</td><td>SELECT</td><td><b>executeQuery()</b> → ResultSet</td></tr>
 </table>
-<pre><code><span class="c">// INSERT com parâmetros (índices começam em 1)</span>
-<span class="t">String</span> sql = <span class="s">"INSERT INTO tb_cliente (nome, telefone) VALUES (?, ?)"</span>;
-<span class="t">PreparedStatement</span> stmt = conexao.<span class="a">prepareStatement</span>(sql);
-stmt.<span class="a">setString</span>(<span class="n">1</span>, cliente.getNome());
-stmt.<span class="a">setString</span>(<span class="n">2</span>, cliente.getTelefone());
-stmt.<span class="a">executeUpdate</span>();</code></pre>
-<pre><code><span class="c">// SELECT e ResultSet</span>
-<span class="t">String</span> sql = <span class="s">"SELECT id, nome FROM tb_cliente ORDER BY nome"</span>;
-<span class="t">ResultSet</span> rs = stmt.<span class="a">executeQuery</span>();
-<span class="k">while</span> (rs.<span class="a">next</span>()) {              <span class="c">// next(): avança e retorna false no fim</span>
-    <span class="t">Long</span> id = rs.<span class="a">getLong</span>(<span class="s">"id"</span>);
-    <span class="t">String</span> nome = rs.<span class="a">getString</span>(<span class="s">"nome"</span>);
+<pre><code><span class="t">String</span> sql = <span class="s">"INSERT INTO tb_cliente (nome, telefone) VALUES (?, ?)"</span>;
+<span class="t">PreparedStatement</span> stmt = conexao.prepareStatement(sql);
+stmt.setString(<span class="n">1</span>, cliente.getNome());
+stmt.setString(<span class="n">2</span>, cliente.getTelefone());
+stmt.executeUpdate();</code></pre>
+<pre><code><span class="t">ResultSet</span> rs = stmt.executeQuery();
+<span class="k">while</span> (rs.next()) {          <span class="c">// next(): false no fim</span>
+    <span class="t">Long</span> id = rs.getLong(<span class="s">"id"</span>);
+    <span class="t">String</span> nome = rs.getString(<span class="s">"nome"</span>);
 }</code></pre>
-<div class="callout err"><b>Alerta de prova:</b> um <b>UPDATE ou DELETE sem WHERE</b> altera/remove <b>todos</b> os registros. O PreparedStatement parametrizado também evita <b>SQL injection</b>.</div>
-<pre><code><span class="c">// Regra salvar() do projeto: ID nulo = novo; ID preenchido = existente</span>
-<span class="k">if</span> (objeto.getId() == <span class="k">null</span>) {
-    repositorio.<span class="a">inserir</span>(objeto);   <span class="c">// INSERT</span>
-} <span class="k">else</span> {
-    repositorio.<span class="a">alterar</span>(objeto);   <span class="c">// UPDATE</span>
-}</code></pre>
-
-<h3 class="blk">🔌 JDBC e o padrão DAO</h3>
-<p><b>JDBC</b> é a API Java para conversar com bancos relacionais. <b>DAO (Data Access Object)</b> concentra o acesso a dados numa classe específica.</p>
-<pre><code><span class="c">// try-with-resources: fecha recursos AutoCloseable mesmo com exceção</span>
-<span class="k">try</span> (<span class="t">Connection</span> conexao = ConnectionFactory.getConnection();
-     <span class="t">PreparedStatement</span> stmt = conexao.prepareStatement(sql)) {
-    stmt.executeUpdate();
-}</code></pre>
-<table>
-<tr><th>Elemento JDBC</th><th>Função</th></tr>
-<tr><td><b>Connection</b></td><td>Conexão ativa com o banco</td></tr>
-<tr><td><b>PreparedStatement</b></td><td>Prepara comando SQL e recebe parâmetros</td></tr>
-<tr><td><b>ResultSet</b></td><td>Percorre resultados de um SELECT</td></tr>
-<tr><td><b>DriverManager</b></td><td>Obtém conexão com URL, usuário e senha</td></tr>
-<tr><td><b>ConnectionFactory</b></td><td>Classe do projeto que centraliza a conexão</td></tr>
-</table>
-
-<h3 class="blk">🗺️ JPA, Hibernate, ORM e JPQL</h3>
-<p><b>JPA</b> = especificação de persistência de objetos Java. <b>Hibernate</b> = uma implementação dela. <b>ORM</b> = Object-Relational Mapping (mapeia objetos ↔ tabelas).</p>
-<table>
-<tr><th>Anotação</th><th>Função</th></tr>
-<tr><td><code>@Entity</code></td><td>Declara a classe como entidade JPA</td></tr>
-<tr><td><code>@Table(name="tb_pizza")</code></td><td>Define o nome da tabela</td></tr>
-<tr><td><code>@Id</code></td><td>Define a chave primária</td></tr>
-<tr><td><code>@GeneratedValue</code></td><td>Configura a geração do identificador</td></tr>
-<tr><td><code>@Column</code></td><td>Personaliza o mapeamento de uma coluna</td></tr>
-<tr><td><code>@Enumerated</code></td><td>Define como um enum será persistido</td></tr>
-</table>
+<div class="callout err"><b>Alerta:</b> UPDATE/DELETE sem <b>WHERE</b> afeta TODA a tabela. PreparedStatement evita SQL injection.</div>
+<pre><code><span class="k">if</span> (objeto.getId() == <span class="k">null</span>) repositorio.inserir(objeto);  <span class="c">// novo</span>
+<span class="k">else</span> repositorio.alterar(objeto);                        <span class="c">// existente</span></code></pre>
+<h3 class="blk">🗺️ JPA / Hibernate</h3>
 <pre><code><span class="k">@Entity</span>
 <span class="k">@Table</span>(name = <span class="s">"tb_pizza"</span>)
 <span class="k">public class</span> <span class="t">Pizza</span> {
-    <span class="k">@Id</span>
-    <span class="k">@GeneratedValue</span>(strategy = GenerationType.IDENTITY)
+    <span class="k">@Id</span> <span class="k">@GeneratedValue</span>(strategy = GenerationType.IDENTITY)
     <span class="k">private</span> <span class="t">Long</span> id;
     <span class="k">private</span> <span class="t">String</span> sabor;
     <span class="k">private</span> <span class="k">double</span> preco;
 }</code></pre>
-<h4>Transação JPA</h4>
-<pre><code><span class="t">EntityTransaction</span> tx = manager.getTransaction();
-<span class="k">try</span> {
-    tx.<span class="a">begin</span>();              <span class="c">// inicia</span>
-    manager.<span class="a">persist</span>(pizza);
-    tx.<span class="a">commit</span>();             <span class="c">// confirma</span>
-} <span class="k">catch</span> (<span class="t">RuntimeException</span> e) {
-    <span class="k">if</span> (tx.isActive()) tx.<span class="a">rollback</span>();  <span class="c">// desfaz</span>
-    <span class="k">throw</span> e;
-}</code></pre>
 <table>
 <tr><th>Método JPA</th><th>O que faz</th></tr>
-<tr><td><code>persist()</code></td><td>Torna uma entidade nova gerenciada (inserção)</td></tr>
-<tr><td><code>find()</code></td><td>Busca entidade por classe + chave primária</td></tr>
-<tr><td><code>merge()</code></td><td>Mescla o estado da entidade ao contexto (atualizar)</td></tr>
-<tr><td><code>remove()</code></td><td>Marca entidade gerenciada para remoção</td></tr>
+<tr><td><code>persist()</code></td><td>Insere entidade nova</td></tr>
+<tr><td><code>find()</code></td><td>Busca por classe + PK</td></tr>
+<tr><td><code>merge()</code></td><td>Atualiza</td></tr>
+<tr><td><code>remove()</code></td><td>Remove</td></tr>
 </table>
-<h4>SQL × JPQL</h4>
-<pre><code><span class="c">-- SQL: tabela/colunas</span>
-SELECT * FROM tb_pizza ORDER BY sabor;
-
-<span class="c">-- JPQL: entidade/atributos Java</span>
-SELECT p FROM Pizza p ORDER BY p.sabor</code></pre>
-<div class="callout info">Em JPQL, <code>Pizza</code> é o nome da <b>entidade</b> e <code>p.sabor</code> é um <b>atributo Java</b> — não necessariamente o nome físico da coluna.</div>
-
-<h3 class="blk">🧬 Orientação a objetos</h3>
-<h4>Encapsulamento</h4>
-<p>Atributos <code>private</code>; getters/setters dão acesso controlado.</p>
-<h4>Generics — InterfaceDao&lt;T&gt;</h4>
+<pre><code>tx.begin(); manager.persist(pizza); tx.commit();  <span class="c">// rollback() desfaz</span></code></pre>
+<h3 class="blk">🧬 OO: generics, enum, Lombok</h3>
 <pre><code><span class="k">public interface</span> <span class="t">InterfaceDao</span>&lt;<span class="t">T</span>&gt; {
-    <span class="k">void</span> inserir(<span class="t">T</span> objeto);
-    <span class="k">void</span> alterar(<span class="t">T</span> objeto);
-    <span class="k">void</span> excluir(<span class="t">Long</span> id);
-    <span class="t">List</span>&lt;<span class="t">T</span>&gt; listar();
-}</code></pre>
-<p><code>T</code> é um parâmetro de tipo: a mesma interface serve para Cliente e Pizza. Define o <b>contrato</b>, não como cada classe acessa o banco.</p>
-<h4>Enum</h4>
-<pre><code><span class="k">public enum</span> <span class="t">TipoPizza</span> { DOCE, SALGADA }</code></pre>
-<p>Enum limita os valores a um conjunto fixo. <code>values()</code> retorna um <b>array com todas as constantes</b>.</p>
-<h4>Lombok @Data &amp; LocalDate</h4>
-<p><code>@Data</code> (Lombok) gera getters, setters, <code>equals()</code>, <code>hashCode()</code> e <code>toString()</code> em tempo de compilação. <code>LocalDate</code> = data sem horário; <code>LocalDateTime</code> = data + hora.</p>
-
-<h3 class="blk">🖥️ JavaFX, FXML e eventos</h3>
+    <span class="k">void</span> inserir(<span class="t">T</span> o); <span class="k">void</span> alterar(<span class="t">T</span> o);
+    <span class="k">void</span> excluir(<span class="t">Long</span> id); <span class="t">List</span>&lt;<span class="t">T</span>&gt; listar();
+}
+<span class="k">public enum</span> <span class="t">TipoPizza</span> { DOCE, SALGADA }   <span class="c">// values() = array de constantes</span></code></pre>
+<p><code>@Data</code> (Lombok) gera getters, setters, equals, hashCode, toString. <code>LocalDate</code> = data sem hora.</p>
+<h3 class="blk">🖥️ JavaFX</h3>
 <table>
-<tr><th>Elemento</th><th>Uso</th></tr>
-<tr><td><code>FXML</code></td><td>Arquivo que descreve a estrutura visual da tela</td></tr>
-<tr><td><code>@FXML</code></td><td>Associa campos e métodos do controller ao FXML</td></tr>
-<tr><td><code>TextField / ComboBox</code></td><td>Campo de texto / lista de opções</td></tr>
-<tr><td><code>TableView / TableColumn</code></td><td>Tabela de objetos / coluna</td></tr>
-<tr><td><code>Alert</code></td><td>Janela de aviso, erro ou confirmação</td></tr>
-<tr><td><code>initialize()</code></td><td>Configuração executada <b>após</b> carregar o FXML e injetar componentes</td></tr>
+<tr><td><code>@FXML</code></td><td>Liga campos/métodos ao FXML</td></tr>
+<tr><td><code>initialize()</code></td><td>Config após carregar FXML</td></tr>
+<tr><td><code>TableView / ComboBox / Alert</code></td><td>Tabela / lista / aviso</td></tr>
 </table>
-<pre><code><span class="c">// Carregar tabela</span>
-colNome.setCellValueFactory(<span class="k">new</span> <span class="t">PropertyValueFactory</span>&lt;&gt;(<span class="s">"nome"</span>));
-lista = FXCollections.observableArrayList(service.listar());
-tbCliente.setItems(lista);</code></pre>
-
-<h3 class="blk">✅ Validação, exceções e qualidade</h3>
-<pre><code><span class="k">if</span> (cliente.getNome() == <span class="k">null</span> || cliente.getNome().<span class="a">isBlank</span>()) {
-    <span class="k">throw new</span> <span class="t">IllegalArgumentException</span>(<span class="s">"Nome obrigatório"</span>);
-}</code></pre>
-<p><code>isBlank()</code> = string vazia ou só espaços. Verificar <code>null</code> antes evita <code>NullPointerException</code>.</p>
-<div>
-<span class="kpill"><b>try</b> código que pode falhar</span>
-<span class="kpill"><b>catch</b> trata a exceção</span>
-<span class="kpill"><b>throw</b> lança exceção</span>
-<span class="kpill"><b>finally</b> finalização sempre executa</span>
-<span class="kpill"><b>RuntimeException</b> não verificada</span>
-</div>
-<h4>Validações típicas de Pizza</h4>
-<ul>
-<li>Sabor informado e não só espaços.</li>
-<li>Tipo e tamanho selecionados.</li>
-<li>Preço válido → rejeitar com <code>preco &lt;= 0</code> (zero e negativos).</li>
-<li>Tratar falhas de persistência sem mensagens confusas.</li>
-</ul>
-
-<h3 class="blk">🌿 Git (básico)</h3>
-<div>
-<span class="kpill"><b>git status</b> arquivos modificados/staged</span>
-<span class="kpill"><b>git add .</b> prepara alterações</span>
-<span class="kpill"><b>git commit -m</b> registra LOCAL</span>
-<span class="kpill"><b>git push</b> envia ao REMOTO</span>
-<span class="kpill"><b>git pull</b> integra mudanças remotas</span>
-</div>
-<div class="callout warn"><b>Não confunda:</b> <b>commit</b> registra localmente; <b>push</b> envia para o remoto.</div>
-
-<h3 class="blk">🔎 Roteiro para ler um método desconhecido na prova</h3>
-<ol>
-<li>Identifique a <b>camada</b> (Controller/Service/DAO/Repository/Model).</li>
-<li>Localize a <b>entrada</b> (parâmetro, campo da tela, ID).</li>
-<li>Procure <b>condições</b> (if, null, strings vazias).</li>
-<li>Identifique a <b>operação</b> (INSERT/SELECT/UPDATE/DELETE ou persist/find/merge/remove).</li>
-<li>Veja como o <b>resultado</b> é tratado (lista, objeto, exceção, mensagem).</li>
-<li>Confira o que pode <b>dar errado</b> (ID inexistente, campo vazio, conexão fechada, transação não confirmada).</li>
-</ol>
+<div class="callout info">Validação essencial fica no <b>Service</b> (regras não dependem da tela). <code>isBlank()</code> → checar <code>null</code> antes evita NullPointerException.</div>
 </section>
 
 <!-- ===================== UML ===================== -->
 <section id="uml">
 <h2 class="sec">📐 UML &amp; Diagrama de Classes</h2>
-<p class="lead">Na prova de sexta você vai <b>criar o UML e preencher o diagrama de classes do zero</b>. Abaixo está o diagrama completo do domínio Pizzaria como modelo — estude a estrutura e os relacionamentos.</p>
-
-<h3 class="blk">Diagrama de classes — domínio Pizzaria</h3>
+<p class="lead">Na sexta você cria o UML do zero. Modelo completo do domínio Pizzaria abaixo.</p>
 <div class="uml-grid">
-  <div class="uml-class">
-    <div class="cn">Cliente <small>&laquo;entity&raquo;</small></div>
-    <div class="sect"><div><span class="vis">-</span> id : Long</div><div><span class="vis">-</span> nome : String</div><div><span class="vis">-</span> telefone : String</div></div>
-    <div class="sect"><div><span class="vis">+</span> getId() / setNome()...</div></div>
-  </div>
-  <div class="uml-class">
-    <div class="cn">Pizza <small>&laquo;entity&raquo;</small></div>
-    <div class="sect"><div><span class="vis">-</span> id : Long</div><div><span class="vis">-</span> sabor : String</div><div><span class="vis">-</span> preco : double</div><div><span class="vis">-</span> tipo : TipoPizza</div><div><span class="vis">-</span> tamanho : Tamanho</div></div>
-  </div>
-  <div class="uml-class">
-    <div class="cn">Pedido</div>
-    <div class="sect"><div><span class="vis">-</span> id : Long</div><div><span class="vis">-</span> cliente : Cliente</div><div><span class="vis">-</span> itens : List&lt;ItemPedido&gt;</div><div><span class="vis">-</span> formaPagamento : FormaPagamento</div><div><span class="vis">-</span> data : LocalDate</div></div>
-  </div>
-  <div class="uml-class">
-    <div class="cn">ItemPedido</div>
-    <div class="sect"><div><span class="vis">-</span> id : Long</div><div><span class="vis">-</span> pizza : Pizza</div><div><span class="vis">-</span> quantidade : int</div><div><span class="vis">-</span> subtotal : double</div></div>
-  </div>
-  <div class="uml-class">
-    <div class="cn">&laquo;enum&raquo; Tamanho</div>
-    <div class="sect"><div>PEQUENA</div><div>MEDIA</div><div>GRANDE</div></div>
-  </div>
-  <div class="uml-class">
-    <div class="cn">&laquo;enum&raquo; TipoPizza</div>
-    <div class="sect"><div>DOCE</div><div>SALGADA</div></div>
-  </div>
-  <div class="uml-class">
-    <div class="cn">&laquo;enum&raquo; FormaPagamento</div>
-    <div class="sect"><div>DINHEIRO</div><div>CARTAO</div><div>PIX</div></div>
-  </div>
-  <div class="uml-class">
-    <div class="cn">&laquo;interface&raquo; InterfaceDao&lt;T&gt;</div>
-    <div class="sect"><div><span class="vis">+</span> inserir(T)</div><div><span class="vis">+</span> alterar(T)</div><div><span class="vis">+</span> excluir(Long)</div><div><span class="vis">+</span> listar() : List&lt;T&gt;</div></div>
-  </div>
+  <div class="uml-class"><div class="cn">Cliente</div><div class="sect"><div><span class="vis">-</span> id : Long</div><div><span class="vis">-</span> nome : String</div><div><span class="vis">-</span> telefone : String</div></div></div>
+  <div class="uml-class"><div class="cn">Pizza</div><div class="sect"><div><span class="vis">-</span> id : Long</div><div><span class="vis">-</span> sabor : String</div><div><span class="vis">-</span> preco : double</div><div><span class="vis">-</span> tipo : TipoPizza</div><div><span class="vis">-</span> tamanho : Tamanho</div></div></div>
+  <div class="uml-class"><div class="cn">Pedido</div><div class="sect"><div><span class="vis">-</span> id : Long</div><div><span class="vis">-</span> cliente : Cliente</div><div><span class="vis">-</span> itens : List&lt;ItemPedido&gt;</div><div><span class="vis">-</span> formaPagamento : FormaPagamento</div></div></div>
+  <div class="uml-class"><div class="cn">ItemPedido</div><div class="sect"><div><span class="vis">-</span> id : Long</div><div><span class="vis">-</span> pizza : Pizza</div><div><span class="vis">-</span> quantidade : int</div></div></div>
+  <div class="uml-class"><div class="cn">&laquo;enum&raquo; Tamanho</div><div class="sect"><div>PEQUENA</div><div>MEDIA</div><div>GRANDE</div></div></div>
+  <div class="uml-class"><div class="cn">&laquo;enum&raquo; TipoPizza</div><div class="sect"><div>DOCE</div><div>SALGADA</div></div></div>
+  <div class="uml-class"><div class="cn">&laquo;interface&raquo; InterfaceDao&lt;T&gt;</div><div class="sect"><div><span class="vis">+</span> inserir(T)</div><div><span class="vis">+</span> alterar(T)</div><div><span class="vis">+</span> excluir(Long)</div><div><span class="vis">+</span> listar()</div></div></div>
 </div>
-
-<h3 class="blk">Relacionamentos (como ler/desenhar)</h3>
+<h3 class="blk">Relacionamentos</h3>
 <ul class="rel-list">
-<li><b>Associação 1:N</b> — <code>Cliente (1) ——&lt; (N) Pedido</code>: um cliente faz vários pedidos.</li>
-<li><b>Composição</b> — <code>Pedido ◆——&lt; ItemPedido</code>: o item não existe sem o pedido (losango preenchido no lado do todo).</li>
-<li><b>Associação N:1</b> — <code>ItemPedido (N) &gt;—— (1) Pizza</code>: muitos itens referenciam uma pizza.</li>
-<li><b>Dependência de enum</b> — <code>Pizza ----&gt; Tamanho / TipoPizza</code> (seta tracejada).</li>
-<li><b>Realização</b> — <code>ClienteDao ....▷ InterfaceDao&lt;Cliente&gt;</code>: a classe implementa a interface (seta tracejada com triângulo vazado).</li>
+<li><b>1:N</b> — <code>Cliente (1) ——&lt; (N) Pedido</code></li>
+<li><b>Composição</b> — <code>Pedido ◆——&lt; ItemPedido</code> (item não existe sem pedido)</li>
+<li><b>N:1</b> — <code>ItemPedido (N) &gt;—— (1) Pizza</code></li>
+<li><b>Realização</b> — <code>ClienteDao ....▷ InterfaceDao&lt;Cliente&gt;</code></li>
 </ul>
-
 <div class="card">
-<h4>Notação rápida de visibilidade</h4>
-<span class="kpill"><b>+</b> public</span>
-<span class="kpill"><b>-</b> private</span>
-<span class="kpill"><b>#</b> protected</span>
-<span class="kpill"><b>~</b> package</span>
-<span class="kpill"><b>_sublinhado_</b> static</span>
+<h4>Visibilidade</h4>
+<span class="kpill"><b>+</b> public</span><span class="kpill"><b>-</b> private</span><span class="kpill"><b>#</b> protected</span>
 <h4>Multiplicidade</h4>
-<span class="kpill"><b>1</b> exatamente um</span>
-<span class="kpill"><b>0..1</b> zero ou um</span>
-<span class="kpill"><b>*</b> ou <b>0..*</b> muitos</span>
-<span class="kpill"><b>1..*</b> um ou mais</span>
+<span class="kpill"><b>1</b> um</span><span class="kpill"><b>0..1</b> zero ou um</span><span class="kpill"><b>*</b> muitos</span><span class="kpill"><b>1..*</b> um ou mais</span>
 </div>
-
-<div class="callout ok"><b>Passo a passo pra criar UML do zero na prova:</b>
-<ol style="margin-top:6px">
-<li>Leia o tema e <b>grife os substantivos</b> → viram <b>classes</b> (Cliente, Pizza, Pedido...).</li>
-<li>Grife os <b>adjetivos/dados</b> → viram <b>atributos</b> (nome, preço, data...).</li>
-<li>Grife os <b>verbos</b> → viram <b>métodos</b> (salvar, listar, calcular...).</li>
-<li>Defina <b>relacionamentos</b> e <b>multiplicidade</b> (1:N, N:1, composição).</li>
-<li>Valores fixos (status, tipo, tamanho) → <b>enum</b>.</li>
-<li>Monte as 3 divisões de cada classe: <b>nome | atributos | métodos</b>.</li>
-</ol>
-Treine isso na próxima aba ⚙️.</div>
+<div class="callout ok"><b>Criar UML do zero:</b> substantivos → classes; dados → atributos; verbos → métodos; valores fixos → enum; defina relacionamentos e multiplicidade. Treine na aba ⚙️.</div>
 </section>
 
 <!-- ===================== GERADOR ===================== -->
 <section id="gen">
 <h2 class="sec">⚙️ Gerador de Classe + UML por tema</h2>
-<p class="lead">Simula o que você vai fazer na prova: digite o <b>tema/entidade</b> e os <b>atributos</b>; o gerador cria o cartão UML, a <b>classe Java (entidade JPA)</b>, o <b>Service</b> com <code>salvar()</code> e a implementação de <code>InterfaceDao&lt;T&gt;</code> — tudo no padrão do projeto Pizzaria.</p>
-
+<p class="lead">Digite a entidade e os atributos → gera o UML, a entidade e o Service com <code>salvar()</code>/<code>validar()</code>. Treino direto pra prova.</p>
 <div class="card">
 <div class="gen-row">
-  <input id="gEnt" placeholder="Nome da entidade (ex.: Produto)" value="Produto">
-  <input id="gAttr" placeholder="atributos: nome:String, preco:double, ativo:boolean" value="nome:String, preco:double, categoria:String">
+  <input id="gEnt" placeholder="Entidade (ex.: Produto)" value="Produto">
+  <input id="gAttr" placeholder="nome:String, preco:double" value="nome:String, preco:double, categoria:String">
 </div>
 <div class="gen-row">
   <label style="color:var(--text-sec);font-size:13px;display:flex;align-items:center;gap:7px"><input type="checkbox" id="gJpa" checked> entidade JPA (@Entity)</label>
@@ -623,13 +632,13 @@ Treine isso na próxima aba ⚙️.</div>
 
 <!-- ===================== QUIZ ===================== -->
 <section id="quiz">
-<h2 class="sec">❓ Quiz de revisão</h2>
-<p class="lead">Perguntas e gabarito extraídos diretamente dos dois guias. Escolha o conjunto, responda e veja a explicação na hora.</p>
+<h2 class="sec">❓ Quiz rápido (reforço de conceitos)</h2>
+<p class="lead">A prova é de desenvolvimento, mas revisar conceitos ajuda. Para treinar código, use as abas 🔑 Token, 📝 Tarefas e ⚙️ Gerador.</p>
 <div class="quiz-head">
   <select id="quizSet" onchange="loadQuiz()">
-    <option value="thu">📘 Quinta — Diário Online</option>
+    <option value="thu">🔑 Quinta — Web/Token</option>
     <option value="fri">📙 Sexta — Pizzaria (POO)</option>
-    <option value="all">🔀 Misturado (tudo)</option>
+    <option value="all">🔀 Misturado</option>
   </select>
   <button class="btn ghost" onclick="loadQuiz()">↻ Reiniciar</button>
   <div class="score">Acertos: <b id="score">0</b> / <span id="total">0</span></div>
@@ -640,22 +649,21 @@ Treine isso na próxima aba ⚙️.</div>
 <!-- ===================== FLASHCARDS ===================== -->
 <section id="fc">
 <h2 class="sec">🃏 Flashcards</h2>
-<p class="lead">Clique no cartão para virar. Termos-chave das duas provas.</p>
+<p class="lead">Clique pra virar.</p>
 <div class="quiz-head">
   <select id="fcSet" onchange="loadFC()">
     <option value="all">🔀 Todos</option>
-    <option value="thu">📘 Quinta</option>
+    <option value="thu">🔑 Quinta</option>
     <option value="fri">📙 Sexta</option>
   </select>
 </div>
 <div id="fcGrid" class="fc-grid"></div>
 </section>
 
-<div class="foot">Central de Estudos gerada a partir dos seus guias oficiais • Boa prova, Daniel! 🚀</div>
+<div class="foot">Central de Estudos • gerada dos seus guias + Blackboard • Boa prova, Daniel! 🚀</div>
 </div>
 
 <script>
-/* ---------- NAV ---------- */
 const nav=document.getElementById('nav');
 nav.addEventListener('click',e=>{if(e.target.dataset.s)go(e.target.dataset.s)});
 function go(s){
@@ -665,63 +673,81 @@ function go(s){
   if(s==='quiz'&&!document.getElementById('quizBox').children.length)loadQuiz();
   if(s==='fc'&&!document.getElementById('fcGrid').children.length)loadFC();
   if(s==='gen'&&!document.getElementById('genOut').children.length)gerar();
+  if(s==='token'&&!document.getElementById('tokenDrills').children.length)loadDrills();
+  if(s==='tarefas'&&!document.getElementById('tarefaDrills').children.length)loadDrills();
 }
 
-/* ---------- COUNTDOWN ---------- */
 (function(){
-  const prova1=new Date('2026-10-15T08:00:00-03:00');
-  const prova2=new Date('2026-10-16T08:00:00-03:00');
-  function fmt(d){const ms=d-new Date();if(ms<0)return'em andamento / concluída';const h=Math.floor(ms/3.6e6);const dias=Math.floor(h/24);const hr=h%24;return dias>0?`faltam ~${dias}d ${hr}h`:`faltam ~${hr}h`;}
+  const p1=new Date('2026-10-15T08:00:00-03:00'), p2=new Date('2026-10-16T08:00:00-03:00');
+  function fmt(d){const ms=d-new Date();if(ms<0)return'em andamento';const h=Math.floor(ms/3.6e6),dias=Math.floor(h/24),hr=h%24;return dias>0?`faltam ~${dias}d ${hr}h`:`faltam ~${hr}h`;}
   const t=document.getElementById('cd-thu'),f=document.getElementById('cd-fri');
-  if(t)t.textContent='Full-stack • token sem consulta via POST — '+fmt(prova1);
-  if(f)f.textContent='Criar UML + classes do zero — '+fmt(prova2);
+  if(t)t.textContent='Token via POST (Spring), SEM internet — '+fmt(p1);
+  if(f)f.textContent='Criar UML + classes do zero — '+fmt(p2);
 })();
 
-/* ---------- QUIZ DATA ---------- */
+/* ---- DRILLS ---- */
+const DRILLS={
+token:[
+ {t:"Escreva a classe principal do Spring Boot",h:"anotação + método main",s:`@SpringBootApplication\npublic class TokenApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(TokenApplication.class, args);\n    }\n}`},
+ {t:"Escreva o Controller com o endpoint POST /login",h:"@RestController, @PostMapping, @RequestBody",s:`@RestController\npublic class AuthController {\n    private final TokenService service;\n    public AuthController(TokenService service){ this.service = service; }\n\n    @PostMapping("/login")\n    public TokenResponse login(@RequestBody LoginRequest req){\n        return new TokenResponse(service.gerarToken(req.getUsuario(), req.getSenha()));\n    }\n}`},
+ {t:"Escreva o Service que gera o token (com validação)",h:"@Service, validar nulo/vazio, gerar UUID",s:`@Service\npublic class TokenService {\n    public String gerarToken(String usuario, String senha){\n        if(usuario==null||usuario.isBlank()||senha==null||senha.isBlank())\n            throw new IllegalArgumentException("Usuário e senha obrigatórios");\n        if(!senha.equals("1234"))\n            throw new RuntimeException("Credenciais inválidas");\n        return java.util.UUID.randomUUID().toString();\n    }\n}`},
+ {t:"Escreva os DTOs LoginRequest e TokenResponse",h:"campos + getters/setters",s:`public class LoginRequest {\n    private String usuario, senha;\n    public String getUsuario(){ return usuario; }\n    public void setUsuario(String u){ this.usuario=u; }\n    public String getSenha(){ return senha; }\n    public void setSenha(String s){ this.senha=s; }\n}\n\npublic class TokenResponse {\n    private String token;\n    public TokenResponse(String token){ this.token=token; }\n    public String getToken(){ return token; }\n}`}
+],
+tarefa:[
+ {t:"Escreva a classe Tarefa (construtor começa finalizado=false)",h:"id, titulo, descricao, finalizado + lerId()",s:`public class Tarefa {\n    private int id;\n    private String titulo, descricao;\n    private boolean finalizado;\n    public Tarefa(int id, String titulo, String descricao){\n        this.id=id; this.titulo=titulo; this.descricao=descricao;\n        this.finalizado=false;\n    }\n    public int lerId(){ return id; }\n    public String getTitulo(){ return titulo; }\n    public void setTitulo(String t){ this.titulo=t; }\n    public String getDescricao(){ return descricao; }\n    public void setDescricao(String d){ this.descricao=d; }\n    public boolean isFinalizado(){ return finalizado; }\n    public void setFinalizado(boolean f){ this.finalizado=f; }\n}`},
+ {t:"Escreva adicionar() com validação e id automático",h:"título/descrição obrigatórios, id++",s:`public void adicionar(String titulo, String descricao){\n    if(titulo==null||titulo.isBlank()||descricao==null||descricao.isBlank())\n        throw new IllegalArgumentException("Título e descrição obrigatórios");\n    tarefas.add(new Tarefa(proximoId++, titulo, descricao));\n}`},
+ {t:"Escreva remover(id) validando existência",h:"buscar lança erro se não existe",s:`private Tarefa buscar(int id){\n    for(Tarefa t : tarefas) if(t.lerId()==id) return t;\n    throw new RuntimeException("Tarefa não encontrada");\n}\npublic void remover(int id){\n    tarefas.remove(buscar(id));\n}`},
+ {t:"Escreva listarFinalizadas()",h:"filtra finalizado==true, retorna lista (pode ser vazia)",s:`public ArrayList<Tarefa> listarFinalizadas(){\n    ArrayList<Tarefa> r = new ArrayList<>();\n    for(Tarefa t : tarefas) if(t.isFinalizado()) r.add(t);\n    return r;\n}`}
+]
+};
+function loadDrills(){
+  renderDrills('tokenDrills', DRILLS.token);
+  renderDrills('tarefaDrills', DRILLS.tarefa);
+}
+function renderDrills(boxId, list){
+  const box=document.getElementById(boxId); if(!box||box.children.length)return;
+  list.forEach((d,i)=>{
+    const el=document.createElement('div'); el.className='drill';
+    el.innerHTML=`<div class="task">Exercício ${i+1}: ${d.t}</div><div class="hint">Dica: ${d.h}</div>`+
+      `<textarea placeholder="Escreva seu código aqui..."></textarea>`+
+      `<div style="margin-top:8px"><button class="btn ghost" onclick="this.parentNode.nextElementSibling.classList.toggle('show')">Ver solução</button></div>`+
+      `<div class="sol"><pre><code></code></pre></div>`;
+    el.querySelector('.sol code').textContent=d.s;
+    box.appendChild(el);
+  });
+}
+
+/* ---- QUIZ ---- */
 const QUIZ={
 thu:[
- {q:"Qual é a função do frontend (Angular)?",o:["Processar regras de negócio e acessar dados","Apresentar telas, receber entradas e chamar a API","Gerar e validar tokens JWT","Gerenciar transações no banco"],a:1,e:"O frontend apresenta a interface, recebe entradas e chama a API."},
- {q:"O que faz um Controller no Spring Boot?",o:["Abstrai consultas ao banco","Recebe requisições HTTP e define as respostas","Concentra as regras de negócio","Mapeia objetos para tabelas"],a:1,e:"O Controller recebe requisições HTTP e define a resposta da API."},
- {q:"Por que existe a camada Service?",o:["Para desenhar as telas","Para separar regras de negócio da camada HTTP","Para abrir conexões com o banco","Para gerar o token"],a:1,e:"O Service separa regras de negócio do HTTP, facilitando manutenção e testes."},
- {q:"O que faz um Repository?",o:["Define as rotas HTTP","Abstrai operações de consulta e persistência no banco","Valida as credenciais","Renderiza componentes Angular"],a:1,e:"O Repository abstrai consultas e gravações, normalmente via Spring Data JPA."},
- {q:"O que significa o relacionamento 1:N entre Conta e Anotacao?",o:["Uma anotação tem muitas contas","Uma conta tem muitas anotações; cada anotação pertence a uma conta","Cada conta tem exatamente uma anotação","Não há relacionamento"],a:1,e:"Uma conta pode ter muitas anotações; cada anotação pertence a uma conta."},
- {q:"Para que serve uma chave estrangeira (FK)?",o:["Criptografar senhas","Relacionar registros de tabelas e manter integridade referencial","Gerar o token JWT","Acelerar o build do Maven"],a:1,e:"A FK relaciona registros entre tabelas e mantém a integridade referencial."},
- {q:"Qual método HTTP costuma criar um recurso (Create)?",o:["GET","POST","DELETE","PATCH"],a:1,e:"POST normalmente envia dados / cria recursos; GET consulta."},
- {q:"Para que serve o JWT?",o:["Compilar o backend","Representar autenticação em um token assinado que o servidor valida","Definir o layout das telas","Criar as tabelas do banco"],a:1,e:"JWT carrega informações de autenticação em um token assinado validado pelo servidor."},
- {q:"Por que NÃO guardar senhas com MD5?",o:["É lento demais","É inadequado para senhas; prefira BCrypt ou Argon2","Não funciona em MySQL","Ocupa muito espaço"],a:1,e:"MD5 sem salt é inadequado para senhas. Use BCrypt ou Argon2."},
- {q:"Qual a diferença entre GET e POST?",o:["GET cria, POST consulta","GET costuma consultar; POST costuma enviar dados ou criar","São idênticos","Só POST usa URL"],a:1,e:"GET consulta; POST envia dados ou cria recursos."},
- {q:"Para que serve o pom.xml?",o:["Configurar o Angular","Declarar dependências e configuração de build do Maven","Guardar o token JWT","Definir as rotas REST"],a:1,e:"O pom.xml declara dependências e a configuração de build do Maven."},
- {q:"Para que serve o Docker Compose?",o:["Compilar TypeScript","Definir e iniciar vários serviços juntos","Criar entidades JPA","Validar o JWT"],a:1,e:"Docker Compose descreve e inicia um conjunto de serviços relacionados."},
- {q:"Por que não versionar .env com segredos?",o:["Para o Git ficar mais rápido","Para evitar expor credenciais no repositório e no histórico","Porque .env não é texto","Para economizar espaço"],a:1,e:"Evita expor credenciais no repositório e no histórico do Git."},
- {q:"Qual bug de configuração o guia aponta no JWT?",o:["O token nunca expirava","O Docker Compose passava JWT_SECRET mas JwtUtil não usava a variável","O MySQL não aceitava o token","O Angular ignorava o header Authorization"],a:1,e:"JWT_SECRET era passado no Compose, mas JwtUtil não usava — a config externa não tinha efeito."}
+ {q:"Qual anotação marca a classe que responde requisições HTTP e devolve JSON?",o:["@Service","@RestController","@Entity","@Component"],a:1,e:"@RestController expõe endpoints e serializa o retorno em JSON."},
+ {q:"Qual anotação mapeia um POST para um método?",o:["@GetMapping","@PostMapping","@RequestParam","@Autowired"],a:1,e:"@PostMapping(\"/rota\") mapeia requisições POST."},
+ {q:"O que @RequestBody faz?",o:["Lê um parâmetro da URL","Converte o JSON recebido em objeto Java","Gera o token","Define a porta"],a:1,e:"@RequestBody desserializa o corpo JSON para um objeto Java."},
+ {q:"Para rodar Spring Boot SEM internet, as dependências precisam estar...",o:["No GitHub","No cache local ~/.m2/repository","No Docker Hub","No pom.xml apenas"],a:1,e:"O Maven usa o cache ~/.m2; popule-o com internet antes da prova."},
+ {q:"Qual método HTTP cria um recurso?",o:["GET","POST","DELETE","PATCH"],a:1,e:"POST cria; GET consulta."},
+ {q:"O que faz a camada Service?",o:["Desenha a tela","Concentra as regras de negócio","Abre conexão TCP","Define rotas"],a:1,e:"O Service concentra regras de negócio, separado do Controller."},
+ {q:"Para que serve o JWT?",o:["Compilar o projeto","Representar autenticação num token assinado","Criar tabelas","Estilizar a tela"],a:1,e:"JWT carrega a autenticação em um token assinado validado pelo servidor."},
+ {q:"Como o token costuma ser enviado nas rotas protegidas?",o:["Na URL","No header Authorization: Bearer <token>","No nome do arquivo","Em um cookie de sessão PHP"],a:1,e:"Padrão: header Authorization: Bearer <token>."},
+ {q:"Como se injeta o Service no Controller?",o:["new TokenService()","Por construtor (ou @Autowired)","Via SQL","Via FXML"],a:1,e:"Injeção de dependência: por construtor é o jeito recomendado."},
+ {q:"Por que não guardar senha com MD5?",o:["É lento","É inadequado; use BCrypt/Argon2","Não roda em Java","Ocupa muito espaço"],a:1,e:"MD5 sem salt é inseguro para senhas."}
 ],
 fri:[
- {q:"O que significa cada letra do CRUD?",o:["Create, Run, Update, Delete","Create, Read, Update, Delete","Copy, Read, Undo, Delete","Create, Read, Upload, Deploy"],a:1,e:"CRUD = Create, Read, Update, Delete."},
- {q:"Qual classe deve concentrar validações de negócio?",o:["Controller","Service","DAO","View/FXML"],a:1,e:"As regras de negócio ficam no Service."},
- {q:"Qual é o papel do PreparedStatement?",o:["Renderizar a tela","Executar comandos SQL parametrizados","Gerenciar transações JPA","Mapear objetos para tabelas"],a:1,e:"PreparedStatement executa comandos SQL parametrizados (e ajuda contra SQL injection)."},
- {q:"O que rs.next() faz?",o:["Fecha o ResultSet","Move o cursor para o próximo registro e indica se existe","Executa o INSERT","Inicia uma transação"],a:1,e:"Avança o cursor do ResultSet e retorna false quando não há mais registros."},
- {q:"Qual operação JDBC é adequada para SELECT?",o:["executeUpdate()","executeQuery()","commit()","persist()"],a:1,e:"executeQuery() é usado em consultas que retornam ResultSet."},
- {q:"Qual operação JDBC é comum para INSERT, UPDATE e DELETE?",o:["executeQuery()","executeUpdate()","find()","rollback()"],a:1,e:"executeUpdate() retorna a quantidade de linhas afetadas."},
- {q:"O que acontece se um DELETE não tiver WHERE?",o:["Dá erro de compilação","Pode apagar todos os registros da tabela","Apaga só o primeiro registro","Nada acontece"],a:1,e:"Sem WHERE, o DELETE pode remover TODOS os registros."},
- {q:"Qual a diferença entre SQL e JPQL?",o:["São idênticos","SQL usa tabelas/colunas; JPQL usa entidades/atributos Java","JPQL é mais antigo","SQL só funciona no Hibernate"],a:1,e:"SQL trabalha com tabelas/colunas; JPQL com entidades e atributos Java."},
- {q:"O que @Id representa?",o:["O nome da tabela","A chave primária da entidade","Um índice secundário","Um enum"],a:1,e:"@Id define a chave primária da entidade."},
- {q:"Para que serve @GeneratedValue?",o:["Validar o preço","Configurar como o identificador é gerado","Criar a conexão","Gerar getters/setters"],a:1,e:"@GeneratedValue configura a geração do identificador (ex.: IDENTITY)."},
- {q:"Na regra salvar(), o que significa ID nulo?",o:["Objeto existente → alterar","Objeto novo → será inserido","Erro de validação","Deve lançar exceção"],a:1,e:"ID nulo = objeto novo → inserir. ID preenchido = existente → alterar."},
- {q:"O que begin(), commit() e rollback() fazem?",o:["Abrem a tela","Iniciar, confirmar e desfazer uma transação","Validam campos","Carregam a TableView"],a:1,e:"begin inicia, commit confirma, rollback desfaz alterações não confirmadas."},
- {q:"Por que o DAO não deve controlar a interface gráfica?",o:["Porque DAO é lento","Para separar responsabilidades e reduzir acoplamento","Porque JavaFX não permite","Para gerar o token"],a:1,e:"Separar responsabilidades reduz acoplamento e facilita manutenção/testes."},
- {q:"Para que serve o initialize() no JavaFX?",o:["Fechar a conexão","Configurar a tela após carregar o FXML e injetar os componentes","Fazer commit","Lançar exceção"],a:1,e:"initialize() roda após o carregamento do FXML e a injeção dos componentes."},
- {q:"O que values() retorna em um enum?",o:["O primeiro valor","Um array com todas as constantes definidas","Um valor aleatório","Null"],a:1,e:"values() retorna um array com todas as constantes do enum."},
- {q:"O que @Data do Lombok gera?",o:["Só o construtor","Getters, setters, equals, hashCode e toString","As anotações JPA","O arquivo FXML"],a:1,e:"@Data gera getters, setters, equals(), hashCode() e toString()."},
- {q:"Qual é o papel do EntityManager?",o:["Renderizar a tabela","Gerenciar entidades e operações de persistência JPA","Abrir o socket HTTP","Validar o telefone"],a:1,e:"O EntityManager gerencia entidades e operações de persistência JPA."},
- {q:"Por que verificar null antes de isBlank()?",o:["Para a tela carregar mais rápido","Para evitar NullPointerException","Porque isBlank não existe","Para evitar SQL injection"],a:1,e:"Chamar isBlank() em null lançaria NullPointerException."},
- {q:"Qual a diferença entre commit e push no Git?",o:["São iguais","Commit registra localmente; push envia commits ao remoto","Push é local; commit é remoto","Commit apaga arquivos"],a:1,e:"Commit registra localmente; push envia os commits ao repositório remoto."},
- {q:"Por que separar Controller e Service?",o:["Para ter mais arquivos","Controller cuida dos eventos da interface; Service cuida das regras do negócio","Porque o Hibernate exige","Para gerar UML"],a:1,e:"Controller trata eventos da UI; Service trata regras de negócio."}
+ {q:"O que significa CRUD?",o:["Create, Run, Update, Delete","Create, Read, Update, Delete","Copy, Read, Undo, Delete","Create, Read, Upload, Deploy"],a:1,e:"Create, Read, Update, Delete."},
+ {q:"Qual classe concentra validações de negócio?",o:["Controller","Service","DAO","View"],a:1,e:"As regras ficam no Service."},
+ {q:"Papel do PreparedStatement?",o:["Renderiza a tela","Executa SQL parametrizado","Gerencia transação JPA","Mapeia tabelas"],a:1,e:"Executa SQL parametrizado e evita SQL injection."},
+ {q:"O que rs.next() faz?",o:["Fecha o ResultSet","Avança o cursor; false no fim","Executa INSERT","Inicia transação"],a:1,e:"Avança o cursor do ResultSet."},
+ {q:"Operação JDBC para SELECT?",o:["executeUpdate()","executeQuery()","commit()","persist()"],a:1,e:"executeQuery() retorna ResultSet."},
+ {q:"O que acontece num DELETE sem WHERE?",o:["Erro de compilação","Pode apagar todos os registros","Apaga o primeiro","Nada"],a:1,e:"Sem WHERE pode apagar a tabela inteira."},
+ {q:"O que @Id representa?",o:["Nome da tabela","A chave primária","Um índice","Um enum"],a:1,e:"@Id define a chave primária."},
+ {q:"ID nulo na regra salvar() significa...",o:["Alterar","Objeto novo → inserir","Erro","Lançar exceção"],a:1,e:"ID nulo = novo → inserir; preenchido → alterar."},
+ {q:"O que @Data (Lombok) gera?",o:["Só construtor","Getters, setters, equals, hashCode, toString","Anotações JPA","O FXML"],a:1,e:"@Data gera os métodos usuais."},
+ {q:"Para que serve initialize() no JavaFX?",o:["Fechar conexão","Configurar a tela após carregar o FXML","Fazer commit","Lançar exceção"],a:1,e:"Roda após carregar o FXML e injetar componentes."}
 ]
 };
 let qScore=0,qTotal=0;
 function loadQuiz(){
   const set=document.getElementById('quizSet').value;
-  let list = set==='all' ? [...QUIZ.thu,...QUIZ.fri] : [...QUIZ[set]];
+  let list=set==='all'?[...QUIZ.thu,...QUIZ.fri]:[...QUIZ[set]];
   if(set==='all')list.sort(()=>Math.random()-.5);
   qScore=0;qTotal=list.length;
   document.getElementById('score').textContent='0';
@@ -729,26 +755,22 @@ function loadQuiz(){
   const box=document.getElementById('quizBox');box.innerHTML='';
   list.forEach((item,i)=>{
     const d=document.createElement('div');d.className='q';
-    const opts=item.o.map((o,j)=>`<button class="opt" data-c="${j===item.a}" onclick="answer(this,${item.a})">${o}</button>`).join('');
+    const opts=item.o.map((o,j)=>`<button class="opt" data-c="${j===item.a}" onclick="answer(this)">${o}</button>`).join('');
     d.innerHTML=`<div class="qn">Questão ${i+1}</div><div class="qt">${item.q}</div>${opts}<div class="expl"><b>Explicação:</b> ${item.e}</div>`;
     box.appendChild(d);
   });
 }
-function answer(btn,correct){
-  const q=btn.closest('.q');
-  if(q.dataset.done)return;
-  q.dataset.done='1';
-  const opts=q.querySelectorAll('.opt');
-  opts.forEach(o=>{o.classList.add('disabled');if(o.dataset.c==='true')o.classList.add('correct');});
-  if(btn.dataset.c==='true'){qScore++;document.getElementById('score').textContent=qScore;}
-  else{btn.classList.add('wrong');}
+function answer(btn){
+  const q=btn.closest('.q'); if(q.dataset.done)return; q.dataset.done='1';
+  q.querySelectorAll('.opt').forEach(o=>{o.classList.add('disabled');if(o.dataset.c==='true')o.classList.add('correct');});
+  if(btn.dataset.c==='true'){qScore++;document.getElementById('score').textContent=qScore;}else btn.classList.add('wrong');
   q.querySelector('.expl').classList.add('show');
 }
 
-/* ---------- FLASHCARDS ---------- */
+/* ---- FLASHCARDS ---- */
 const FC={
-thu:[["Controller","Recebe requisições HTTP e define as respostas da API."],["Service","Concentra as regras de negócio; separa lógica do HTTP."],["Repository","Abstrai consultas e gravações no banco (Spring Data JPA)."],["DTO","Objeto que transporta dados sem expor a entidade inteira."],["JWT","JSON Web Token: credencial assinada validada pelo servidor."],["1:N (Conta→Anotacao)","Uma conta tem muitas anotações; cada anotação é de uma conta."],["FK","Chave estrangeira: relaciona tabelas e mantém integridade."],["POST","Método HTTP usado para criar recursos."],["BCrypt/Argon2","Hash seguro de senha (substitui o MD5 inadequado)."],["Docker Compose","Define e inicia vários serviços juntos."],["pom.xml","Dependências e build do Maven."],["ORM","Mapeia objetos da aplicação para tabelas do banco."]],
-fri:[["CRUD","Create, Read, Update, Delete."],["PreparedStatement","Executa SQL parametrizado; evita SQL injection."],["executeQuery()","Executa SELECT e retorna um ResultSet."],["executeUpdate()","Executa INSERT/UPDATE/DELETE; retorna linhas afetadas."],["rs.next()","Avança o cursor do ResultSet; false no fim."],["DAO","Data Access Object: concentra o acesso a dados via JDBC."],["@Entity","Declara a classe como entidade JPA."],["@Id / @GeneratedValue","Chave primária / como o ID é gerado."],["persist / find / merge / remove","Inserir / buscar / atualizar / remover (JPA)."],["begin/commit/rollback","Inicia / confirma / desfaz transação."],["JPQL","Consulta por entidades e atributos Java (não colunas)."],["EntityManager","Gerencia entidades e persistência JPA."],["InterfaceDao<T>","Contrato genérico: inserir, alterar, excluir, listar."],["enum values()","Array com todas as constantes do enum."],["@Data (Lombok)","Gera getters, setters, equals, hashCode, toString."],["initialize()","Config da tela após carregar FXML e injetar componentes."],["isBlank()","String vazia ou só espaços (checar null antes)."],["ID nulo","Objeto novo → inserir; ID preenchido → alterar."],["WHERE ausente","UPDATE/DELETE pode afetar todas as linhas!"],["commit × push","Commit = local; push = envia ao remoto."]]
+thu:[["@RestController","Classe que responde HTTP e devolve JSON."],["@PostMapping","Mapeia um POST para o método."],["@RequestBody","Converte o JSON recebido em objeto Java."],["@Service","Classe de regra de negócio, injetável."],["~/.m2","Cache local do Maven — essencial pra rodar offline."],["JWT","Token assinado que carrega a autenticação."],["Authorization: Bearer","Header onde o token vai nas rotas protegidas."],["Injeção por construtor","Jeito recomendado de receber dependências."],["DTO","Objeto que transporta dados (request/response)."],["POST","Verbo HTTP para criar recursos."]],
+fri:[["CRUD","Create, Read, Update, Delete."],["PreparedStatement","SQL parametrizado; evita SQL injection."],["executeQuery()","SELECT → ResultSet."],["executeUpdate()","INSERT/UPDATE/DELETE → linhas afetadas."],["rs.next()","Avança o cursor; false no fim."],["@Entity","Classe = entidade JPA."],["@Id / @GeneratedValue","PK / geração do id."],["persist/find/merge/remove","Inserir/buscar/atualizar/remover (JPA)."],["ID nulo","Objeto novo → inserir."],["WHERE ausente","UPDATE/DELETE afeta tudo!"],["@Data (Lombok)","getters, setters, equals, hashCode, toString."],["initialize()","Config após carregar o FXML."]]
 };
 function loadFC(){
   const set=document.getElementById('fcSet').value;
@@ -762,70 +784,24 @@ function loadFC(){
   });
 }
 
-/* ---------- GERADOR ---------- */
+/* ---- GERADOR ---- */
 function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
 function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
 let lastGen='';
 function gerar(){
   const ent=cap((document.getElementById('gEnt').value||'Entidade').trim().replace(/\s+/g,''));
   const jpa=document.getElementById('gJpa').checked;
-  const raw=document.getElementById('gAttr').value.trim();
-  const attrs=raw.split(',').map(a=>a.trim()).filter(Boolean).map(a=>{
-    const[n,t]=a.split(':').map(x=>x.trim());return{n:n,t:t||'String'};
-  });
-  // UML card
+  const attrs=(document.getElementById('gAttr').value||'').split(',').map(a=>a.trim()).filter(Boolean).map(a=>{const[n,t]=a.split(':').map(x=>x.trim());return{n,t:t||'String'};});
   const umlAttrs=attrs.map(a=>`<div><span class="vis">-</span> ${esc(a.n)} : ${esc(a.t)}</div>`).join('');
   const uml=`<div class="uml-grid"><div class="uml-class"><div class="cn">${esc(ent)} ${jpa?'<small>&laquo;entity&raquo;</small>':''}</div><div class="sect"><div><span class="vis">-</span> id : Long</div>${umlAttrs}</div><div class="sect"><div><span class="vis">+</span> getters / setters</div></div></div></div>`;
-  // Entity
   const fields=attrs.map(a=>`    private ${a.t} ${a.n};`).join('\n');
-  let entity=jpa?`@Entity
-@Table(name = "tb_${ent.toLowerCase()}")
-public class ${ent} {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-${fields}
-    // getters e setters (ou @Data do Lombok)
-}`:`public class ${ent} {
-    private Long id;
-${fields}
-    // getters e setters
-}`;
-  // Service
-  const svc=`public class ${ent}Service {
-    private final InterfaceDao<${ent}> dao;
-
-    public ${ent}Service(InterfaceDao<${ent}> dao) {
-        this.dao = dao;
-    }
-
-    public void salvar(${ent} obj) {
-        validar(obj);
-        if (obj.getId() == null) {
-            dao.inserir(obj);   // novo -> INSERT
-        } else {
-            dao.alterar(obj);   // existente -> UPDATE
-        }
-    }
-
-    private void validar(${ent} obj) {
-        if (obj == null) {
-            throw new IllegalArgumentException("${ent} obrigatório");
-        }
-        ${attrs.filter(a=>a.t==='String').map(a=>`if (obj.get${cap(a.n)}() == null || obj.get${cap(a.n)}().isBlank()) {\n            throw new IllegalArgumentException("${cap(a.n)} obrigatório");\n        }`).join('\n        ')||'// adicione validações de negócio aqui'}
-    }
-}`;
-  const code=entity+'\n\n'+svc;
-  lastGen=code;
-  document.getElementById('genOut').innerHTML=
-    `<h3 class="blk">Diagrama UML</h3>${uml}`+
-    `<h3 class="blk">Entidade Java</h3><pre><code>${esc(entity)}</code></pre>`+
-    `<h3 class="blk">Service (com salvar + validar)</h3><pre><code>${esc(svc)}</code></pre>`+
-    `<div class="callout info">Lembre: a <b>interface genérica</b> <code>InterfaceDao&lt;${esc(ent)}&gt;</code> define o contrato (inserir/alterar/excluir/listar); a implementação concreta (DAO via JDBC ou Repository via JPA) decide COMO acessa o banco.</div>`;
+  const entity=jpa?`@Entity\n@Table(name = "tb_${ent.toLowerCase()}")\npublic class ${ent} {\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n${fields}\n    // getters e setters (ou @Data)\n}`:`public class ${ent} {\n    private Long id;\n${fields}\n    // getters e setters\n}`;
+  const svc=`public class ${ent}Service {\n    private final InterfaceDao<${ent}> dao;\n    public ${ent}Service(InterfaceDao<${ent}> dao){ this.dao = dao; }\n\n    public void salvar(${ent} obj){\n        validar(obj);\n        if(obj.getId()==null) dao.inserir(obj);\n        else dao.alterar(obj);\n    }\n    private void validar(${ent} obj){\n        if(obj==null) throw new IllegalArgumentException("${ent} obrigatório");\n        ${attrs.filter(a=>a.t==='String').map(a=>`if(obj.get${cap(a.n)}()==null || obj.get${cap(a.n)}().isBlank())\n            throw new IllegalArgumentException("${cap(a.n)} obrigatório");`).join('\n        ')||'// validações de negócio'}\n    }\n}`;
+  lastGen=entity+'\n\n'+svc;
+  document.getElementById('genOut').innerHTML=`<h3 class="blk">Diagrama UML</h3>${uml}<h3 class="blk">Entidade Java</h3><pre><code>${esc(entity)}</code></pre><h3 class="blk">Service (salvar + validar)</h3><pre><code>${esc(svc)}</code></pre>`;
 }
-function copyGen(){if(lastGen)navigator.clipboard&&navigator.clipboard.writeText(lastGen);}
+function copyGen(){if(lastGen&&navigator.clipboard)navigator.clipboard.writeText(lastGen);}
 
-/* init */
 gerar();
 </script>
 </body>
